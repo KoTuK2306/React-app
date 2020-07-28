@@ -1,17 +1,15 @@
 import React from 'react';
-import './App.css'
-import logo from './logo.svg';
+import './App.css';
+import Footer from './components/Footer/footer.js'
 import Header from './components/Header/header.js';
 import List from './components/List/list.js';
 
  const App = () => {
   return (
     <div class = 'content'>
-    
     <Header />
-    
-   
-    <List /> 
+    <List />
+    <Footer /> 
     </div>
   );
 }
