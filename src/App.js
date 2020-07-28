@@ -1,15 +1,17 @@
 import React from 'react';
 import './App.css';
-import Footer from './components/Footer/footer.js'
-import Header from './components/Header/header.js';
-import List from './components/List/list.js';
+import Header from './components/Header/header';
+import Navbar from './components/Navbar/navbar';
+import Profile from './components/Profile/profile';
 
  const App = () => {
   return (
-    <div class = 'content'>
-    <Header />
-    <List />
-    <Footer /> 
+    <div className = 'content'>
+
+      <Header />
+      <Navbar />
+      <Profile />
+
     </div>
   );
 }
