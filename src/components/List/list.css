@@ -1,0 +1,7 @@
+li{
+    list-style-type: upper-roman;
+    color: brown;
+}
+.list-content{
+    width: 60%;
+}
