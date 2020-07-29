@@ -1,16 +1,18 @@
 import React from 'react';
 import './profile.css';
 import ProfileBackground from './../ProfileBackground/profile-background'
+import Description from './../ProfileIformation/Description/description'
+import NewPost from '../NewPost/new-post';
+import MyPosts from '../MyPosts/my-posts';
 
 const Profile = () =>{
     return (
         <div className = 'profile'>
 
             <ProfileBackground />
-            
-            <div> Ava + description</div>
-            <div>NewPost</div>
-            <div>My posts</div>
+            <Description />
+            <NewPost />
+            <MyPosts />
    
         </div>
     );

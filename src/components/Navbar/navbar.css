@@ -6,7 +6,13 @@
 }
 
 .nav-text{
-    font-size: 110%;
+    font-size: 15px;
     margin: 10px 10px 0 10px;
-    cursor: pointer;
+    cursor: pointer;    
+}
+a{
+    text-decoration: none;
+}
+a:active{
+    color: white;
 }
