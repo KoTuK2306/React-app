@@ -6,18 +6,19 @@
 }
 
 .my-posts{
-    width: 626px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    display: grid;
+    grid-area: my-posts;
+    grid-template-areas:
+    "input input input"
+    "my-posts my-posts button";
+    grid-template-rows: 8fr 5fr;
+    grid-template-columns: 3fr 4fr 3fr;
 }
 
 .input{
-    margin-left: 20px;
+    grid-area: input;
     height: 30px;
-    width: 600px;
-    display: flex;
-    flex-direction: column;
+    margin: 0 22% 0 20px;
     border: 1.25px solid rgb(157, 63, 245);
     border-radius: 10px;
     font-family: Mulish;
@@ -32,10 +33,10 @@
 }
 
 .button{
+    grid-area: button;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0 0 0;
     padding: 5px 15px;
     background: rgb(157, 63, 245);
     border: 1px solid rgb(157, 63, 245);
@@ -58,3 +59,28 @@
     border: 1px solid rgb(255, 93, 93);
 }
 
+
+
+@media screen and (min-width: 426px) {
+    .my-posts{
+        grid-template-columns: 2fr 1fr 10fr;
+    }
+}
+
+@media screen and (min-width: 376px) {
+    .my-posts{
+        grid-template-columns: 2fr 1fr 4fr;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .my-posts{
+        grid-template-columns: 2fr 1fr 5fr;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .my-posts{
+        grid-template-columns: 2fr 2fr 7fr;
+    }
+}                 
