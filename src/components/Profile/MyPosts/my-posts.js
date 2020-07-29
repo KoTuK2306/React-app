@@ -1,11 +1,22 @@
-import React from 'react';
-import './my-posts.css';
+import React, {useState} from 'react';
+import classes from './my-posts.module.css';
 
 const MyPosts = () =>{
+    const [value, setValue] = useState("")
+    const onChange = (inputValue) => {
+        setValue(inputValue)
+    }
     return(
-        <div className = 'my-posts'>
-            <input type="text" id="text" name="text" value="Enter your post" className = 'input' />
-            <div className = 'button'>Add post</div>
+        <div className = {classes.myPosts}>
+            <input 
+            type="text"
+            id="text"
+            name="text"
+            value={value}
+            placeholder="Enter your post"
+            onChange = {(event) => onChange(event.target.value)}
+            className = {classes.input} />
+            <div className = {classes.button}>Add post</div>
         </div>
     );
 }

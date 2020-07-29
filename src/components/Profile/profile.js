@@ -10,11 +10,12 @@ const Profile = () =>{
         <div className = 'profile'>
 
             <ProfileBackground />
-            <Description />
-            
-            <p className = 'p'>My posts</p>
-            <MyPosts />
-            <NewPost />
+            <div className = "aboutProfile">
+                <Description />
+                <p>My posts</p>
+                <MyPosts />
+                <NewPost />
+            </div>
    
         </div>
     );
