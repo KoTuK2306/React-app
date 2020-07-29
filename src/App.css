@@ -10,8 +10,8 @@
     "nav information";
     grid-template-rows: 7vh 100Vh;
     grid-template-columns: 2fr 10fr;
-    grid-gap: 5px;
     font-size: 15px;
     font-family: Mulish;
-    color: rgb(196, 196, 196);
+    color: rgb(196, 196, 196);  
+    background-color: rgb(157, 63, 245);
 }

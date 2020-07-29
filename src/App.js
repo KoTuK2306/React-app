@@ -8,7 +8,7 @@ import Description from './components/ProfileIformation/Description/description'
  const App = () => {
   return (
     <div className = 'content'>
-
+      
       <Header />
       <Navbar />
       <Profile />
