@@ -11,8 +11,10 @@ const Profile = () =>{
 
             <ProfileBackground />
             <Description />
-            <NewPost />
+            
+            <p className = 'p'>My posts</p>
             <MyPosts />
+            <NewPost />
    
         </div>
     );

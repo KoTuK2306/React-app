@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Mulish-medium;
+    src: url(../Fonts/Mulish-Medium.ttf);
+}
+
 .nav{
     display: flex;
     flex-direction: column;
@@ -8,7 +13,8 @@
 .nav-text{
     font-size: 15px;
     margin: 10px 10px 0 10px;
-    cursor: pointer;    
+    cursor: pointer; 
+    font-family: Mulish-medium;   
 }
 a{
     text-decoration: none;

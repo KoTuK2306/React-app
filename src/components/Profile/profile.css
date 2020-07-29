@@ -5,5 +5,8 @@
     border: 10px solid rgb(255, 255, 255);
     border-top-left-radius: 10px;
     margin: 0;
-    
+}
+
+.p{
+    margin-left: 20px;
 }
