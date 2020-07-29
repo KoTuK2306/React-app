@@ -1,0 +1,13 @@
+.header{
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(157, 63, 245);
+}
+
+.logo{
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
+}

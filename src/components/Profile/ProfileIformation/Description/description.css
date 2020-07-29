@@ -1,0 +1,12 @@
+.description{
+    margin: 20px 0 20px 20px;
+}
+.description-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.description-item-item{
+    margin: 0 0 0 20px;
+}

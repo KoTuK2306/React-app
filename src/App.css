@@ -1,0 +1,17 @@
+@font-face {
+    font-family: Mulish;
+    src: url(./components/Fonts/Mulish-ExtraLightItalic.ttf);
+}
+
+.content{
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "nav information";
+    grid-template-rows: 7vh 100Vh;
+    grid-template-columns: 2fr 10fr;
+    font-size: 15px;
+    font-family: Mulish;
+    color: rgb(196, 196, 196);  
+    background-color: rgb(157, 63, 245);
+}
