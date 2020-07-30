@@ -22,9 +22,11 @@
     cursor: pointer; 
     font-family: Mulish-medium;   
 }
+
 a{
     text-decoration: none;
 }
+
 a:active{
     color: white;
 }

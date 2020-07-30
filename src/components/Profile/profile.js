@@ -13,8 +13,9 @@ const Profile = () =>{
             <div className = {classes.aboutProfile}>
                 <Description />
                 <p>My posts</p>
-                <MyPosts />
-                <NewPost />
+                <MyPosts /> 
+                <NewPost message = 'Pavel is a gay'/>
+                <NewPost message = 'Beatiful day'/>
             </div>
    
         </div>

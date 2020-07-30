@@ -1,0 +1,17 @@
+.posts{
+    margin-right: 20px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.newPost{
+    margin-left: 10px;
+}
+
+.posts img{
+    height: 60px;
+    border-radius: 50%;
+}

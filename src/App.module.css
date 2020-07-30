@@ -8,12 +8,13 @@
     grid-template-areas:
     "header header"
     "nav information";
-    grid-template-rows: 50px 200vh;
+    grid-template-rows: 50px 100vh;
     grid-template-columns: 120px 10fr;
     font-size: 15px;
     font-family: Mulish;
     color: rgb(196, 196, 196);  
     background-color: rgb(157, 63, 245);
+    max-height: 500vh;
 }
 
 @media screen and (max-width: 768px){
