@@ -7,3 +7,10 @@
 .descriptionItemItem{
     margin: 0 0 0 20px;
 }
+
+@media screen and (max-width: 768px){
+    .descriptionItem{
+        flex-direction: column;
+        align-items: center;
+    }
+}

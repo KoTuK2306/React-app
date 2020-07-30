@@ -8,4 +8,14 @@
 
 .aboutProfile{
     padding: 20px 0 0 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px){
+    .aboutProfile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
 }

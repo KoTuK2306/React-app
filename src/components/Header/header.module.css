@@ -11,3 +11,9 @@
     height: 30px;
     padding-left: 10px;
 }
+
+/* @media screen and (max-width: 768px){
+    .logo{
+        display: none;
+    }
+} */

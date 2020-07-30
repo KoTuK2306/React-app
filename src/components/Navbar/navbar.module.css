@@ -8,6 +8,12 @@
     flex-direction: column;
     grid-area: nav;
     background-color: rgb(157, 63, 245);
+    overflow: hidden;
+    max-height: 720px;
+}
+
+.active{
+    max-height: 720px;
 }
 
 .navText{
@@ -21,4 +27,10 @@ a{
 }
 a:active{
     color: white;
+}
+
+@media screen and (max-width: 768px){
+    .nav{
+        max-height: 0;
+    }
 }
