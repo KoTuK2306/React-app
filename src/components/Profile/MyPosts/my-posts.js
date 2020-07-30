@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import classes from './my-posts.module.css';
+import classes from './myPosts.module.css';
 
 const MyPosts = () =>{
     const [value, setValue] = useState("")

@@ -1,17 +1,17 @@
 import React from 'react';
-import './description.css';
+import classes from './description.module.css';
 import Ava from './../Avatar/ava';
 import DescriptionItem from '../Description/DescriptionItem/description-item'
 
 
 const Description = () =>{
     return(
-        <div className='description'>
-            <div className = 'description-item'>
+        <div className = {classes.description}>
+            <div className = {classes.descriptionItem}>
                 
                 <Ava />
 
-                <div className = 'description-item-item'>
+                <div className = {classes.descriptionItemItem}>
                     <DescriptionItem />
                     <DescriptionItem />
                     <DescriptionItem />  

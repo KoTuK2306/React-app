@@ -1,10 +1,10 @@
 import React from 'react';
-import './header.css'
+import classes from './header.module.css'
 
 const Header = () =>{
     return(
-        <div className = 'header'>
-            <img src='https://www.svgrepo.com/show/40641/robot.svg' className='logo'/>
+        <div className = {classes.header}>
+            <img src='https://www.svgrepo.com/show/40641/robot.svg' className = {classes.logo}/>
         </div>
     );
 }

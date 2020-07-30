@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
+import classes from './App.module.css';
 import Header from './components/Header/header';
 import Navbar from './components/Navbar/navbar';
 import Profile from './components/Profile/profile';
 
  const App = () => {
   return (
-    <div className = 'content'>
+    <div className = {classes.content}>
       
       <Header />
       <Navbar />

@@ -1,9 +1,9 @@
-.description-item{
+.descriptionItem{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.description-item-item{
+.descriptionItemItem{
     margin: 0 0 0 20px;
 }

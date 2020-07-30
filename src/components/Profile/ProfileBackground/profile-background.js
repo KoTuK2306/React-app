@@ -1,9 +1,9 @@
 import React from 'react';
-import './profile-background.css';
+import classes from './profileBackground.module.css';
 
 const ProfileBackground = () => {
     return(
-        <div className='img'>
+        <div className = {classes.img}>
 
         </div>
     );
