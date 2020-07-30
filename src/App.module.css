@@ -18,12 +18,7 @@
 
 @media screen and (max-width: 768px){
    .content{
-       /* background-color: rgb(255, 255, 255); */
-       grid-template-areas:
-        "header"
-        "information";
-        grid-template-rows: 50px 200vh;
-        grid-template-columns: 100%;
+      display: block;
+      background-color: initial;
    }
-   
 }
