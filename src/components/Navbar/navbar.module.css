@@ -9,7 +9,6 @@
     grid-area: nav;
     background-color: rgb(157, 63, 245);
     overflow: hidden;
-    max-height: 720px;
 }
 
 .active{

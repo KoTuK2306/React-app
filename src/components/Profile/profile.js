@@ -14,8 +14,8 @@ const Profile = () =>{
                 <Description />
                 <p>My posts</p>
                 <MyPosts /> 
-                <NewPost message = 'Pavel is a gay'/>
-                <NewPost message = 'Beatiful day'/>
+                <NewPost likesCount = {23} message = 'Pavel is a gay'/>
+                <NewPost likesCount = {4} message = 'Beatiful day'/>
             </div>
    
         </div>
