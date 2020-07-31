@@ -19,11 +19,12 @@
     font-size: 15px;
     margin: 10px 10px 0 10px;
     cursor: pointer; 
-    font-family: Mulish-medium;   
+    font-family: Mulish-medium;  
 }
 
 a{
     text-decoration: none;
+    color: rgb(68, 68, 68);
 }
 
 a:active{
