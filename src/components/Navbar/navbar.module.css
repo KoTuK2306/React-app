@@ -11,15 +11,15 @@
     overflow: hidden;
 }
 
-.active{
-    max-height: 720px;
-}
-
 .navText{
     font-size: 15px;
     margin: 10px 10px 0 10px;
     cursor: pointer; 
     font-family: Mulish-medium;  
+}
+
+.navText a.active{
+    color: white;
 }
 
 a{
