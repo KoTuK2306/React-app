@@ -25,6 +25,11 @@
 a{
     text-decoration: none;
     color: rgb(68, 68, 68);
+    transition: all 0.5s ease-in;
+}
+
+a:hover{
+    color: white;
 }
 
 a:active{
