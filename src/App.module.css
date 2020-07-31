@@ -7,13 +7,23 @@
     display: grid;
     grid-template-areas:
     "header header"
-    "nav information";
+    "nav contentItem";
     grid-template-rows: 50px 1fr;
     grid-template-columns: 120px 10fr;
     font-size: 15px;
     font-family: Mulish;
     color: rgb(196, 196, 196);  
     background-color: rgb(157, 63, 245);
+}
+
+.contentItem{
+    grid-area: contentItem;
+    background-color: rgb(228, 228, 228);
+    color: rgb(53, 53, 53);
+    border: 10px solid rgb(255, 255, 255);
+    border-top-left-radius: 10px;
+    margin: 0;
+    padding-bottom: 15px;
 }
 
 @media screen and (max-width: 768px){
