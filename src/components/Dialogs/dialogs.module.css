@@ -5,7 +5,7 @@
 .dialogs{
     margin: 20px 0 0 20px;
     display: grid;
-    grid-template-columns: 3fr 7fr;
+    grid-template-columns: 3fr 3px 7fr;
 }
 
 .dialogsTitle{
@@ -16,9 +16,6 @@
     margin: 15px 0 15px 0;
 }
 
-.dialogsItems{
-    border-right: 1px solid black;
-}
 
 .messages{
     display: flex;
@@ -29,4 +26,27 @@
 
 .message{
     margin: 15px 0 15px 15px;
+}
+
+.line{
+    height: 100%;
+}
+
+.sexy_line1{ 
+    display:block;
+    border:none;
+    color:white;
+    height:50%;
+    width: 3px;
+    background:black;
+    background: radial-gradient(farthest-side at bottom, rgb(157, 63, 245), #f1db3600);
+}
+.sexy_line2{ 
+    display:block;
+    border:none;
+    color:white;
+    height:50%;
+    width: 3px;
+    background:black;
+    background: radial-gradient(farthest-side at top, rgb(157, 63, 245), #f1db3600);
 }

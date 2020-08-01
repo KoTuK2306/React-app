@@ -9,6 +9,7 @@ const Dialogs = (props) =>{
 
                 <div className = {classes.dialogsItem + ' ' + classes.active}>
                     Zhopa
+                    
                 </div>
                 <div className = {classes.dialogsItem}>
                     Zhopa
@@ -19,18 +20,17 @@ const Dialogs = (props) =>{
                 <div className = {classes.dialogsItem}>
                     Zhopa
                 </div>
-                <div className = {classes.dialogsItem}>
-                    Zhopa
-                </div>
-                <div className = {classes.dialogsItem}>
-                    Zhopa
-                </div>
-                <div className = {classes.dialogsItem}>
-                    Zhopa
-                </div>
+                
+                
+                
+            </div>
+            <div className = {classes.line}>
+                <span className={classes.sexy_line1}></span>
+                <span className={classes.sexy_line2}></span>
             </div>  
 
             <div className = {classes.messages}>
+                
 
                 <div className = {classes.message}>Hi</div>
                 <div className = {classes.message}>Bye</div>
