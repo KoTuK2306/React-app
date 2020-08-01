@@ -8,10 +8,6 @@
     grid-template-columns: 3fr 3px 7fr;
 }
 
-.dialogsTitle{
-    text-transform: uppercase;
-}
-
 .dialogsItem{
     margin: 15px 0 15px 0;
 }
@@ -21,11 +17,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: flex-end;
     margin-right: 20px;
-}
-
-.message{
-    margin: 15px 0 15px 15px;
 }
 
 .line{
