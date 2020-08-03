@@ -1,8 +1,24 @@
 import React from 'react';
 import classes from './dialogs.module.css';
-import Dialog from './Dialog/dialog';
+import Line from './../Dialogs/Line/line';
 import { NavLink, BrowserRouter, Route } from 'react-router-dom';
-import Messages from './../Dialogs/Messages/messages'
+
+const Dialog = ({userName, id}) =>{
+    const path = '/dialogs/' + id;
+    return(
+            <div className = {classes.dialog}>
+                <NavLink className = {classes.dialogItem} to = {path} activeClassName = {classes.active2}>{userName}</NavLink>
+            </div> 
+    );
+}
+
+const Message = ({message}) =>{
+    return(
+        <div className = {classes.message}>
+            {message}
+        </div>
+    );
+}
 
 const Dialogs = (props) =>{
     return(
@@ -11,22 +27,24 @@ const Dialogs = (props) =>{
             <div className = {classes.dialogs}>
                 <div className = {classes.dialogsItems}>
                     
-                    <NavLink to = '/dialogs/1' activeClassName = {classes.active2}> <Dialog userName = 'Dmitriy'/> </NavLink>
-                    <NavLink to = '/dialogs/2' activeClassName = {classes.active2}> <Dialog userName = 'Nikolay'/> </NavLink>
-                    <NavLink to = '/dialogs/3' activeClassName = {classes.active2}> <Dialog userName = 'Alexey'/> </NavLink>
-                    <NavLink to = '/dialogs/4' activeClassName = {classes.active2}> <Dialog userName = 'Pavel'/> </NavLink>
+                    <Dialog userName = 'Dmitriy'id = '1'/>
+                    <Dialog userName = 'Nikolay'id = '2'/>
+                    <Dialog userName = 'Alexey'id = '3'/>
+                    <Dialog userName = 'Pavel'id = '4'/>
+                    <Dialog userName = 'Alex'id = '5'/>
+                    <Dialog userName = 'Andrey'id = '6'/>
+                    <Dialog userName = 'Anton'id = '7'/>
+                    <Dialog userName = 'Artem'id = '8'/>
+                    <Dialog userName = 'Artur'id = '9'/>
+                    <Dialog userName = 'Boris'id = '10'/>
                           
                 </div>
-
-                <div className = {classes.line}>
-                    <span className={classes.sexy_line1}></span>
-                    <span className={classes.sexy_line2}></span>
-                </div>  
-
+                <Line />
                 <div className = {classes.messages}>
 
-                <Route path = '/dialogs/1'component = {Messages}/>
-                               
+                    <Message message = 'Hi!'/>
+                    <Message message = 'What do you think about a weather today?'/>
+                    <Message message = 'Oh, this is bullshit'/>         
 
                 </div>
 

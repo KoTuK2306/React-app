@@ -1,0 +1,23 @@
+
+.line{
+    height: 100%;
+}
+
+.lineItem1{ 
+    display:block;
+    border:none;
+    color:white;
+    height:50%;
+    width: 3px;
+    background:black;
+    background: radial-gradient(farthest-side at bottom, rgb(157, 63, 245), #f1db3600);
+}
+.lineItem2{ 
+    display:block;
+    border:none;
+    color:white;
+    height:50%;
+    width: 3px;
+    background:black;
+    background: radial-gradient(farthest-side at top, rgb(157, 63, 245), #f1db3600);
+}
