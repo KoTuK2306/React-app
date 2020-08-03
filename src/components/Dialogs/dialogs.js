@@ -22,7 +22,7 @@ const Message = ({message}) =>{
 
 const Dialogs = (props) =>{
     
-    const dialogData = [
+    const dialogsData = [
         {id: 1, userName: 'Dmitriy'},
         {id: 2, userName: 'Nikolay'},
         {id: 3, userName: 'Alexey'},
@@ -41,33 +41,21 @@ const Dialogs = (props) =>{
         {id: 3, message: 'Oh, this is bullshit'},
     ]
 
-    return(
+const dialogs = dialogsData
+.map(dialog => <Dialog userName = {dialog.userName} id = {dialog.id}/>);
 
+const messages = messagesData
+.map (message => <Message message = {message.message}/>)
+    return(
         <BrowserRouter>
             <div className = {classes.dialogs}>
                 <div className = {classes.dialogsItems}>
-                    
-                    <Dialog userName = {dialogData[0].userName} id = {dialogData[0].id}/>
-                    <Dialog userName = {dialogData[1].userName} id = {dialogData[1].id}/>
-                    <Dialog userName = {dialogData[2].userName} id = {dialogData[2].id}/>
-                    <Dialog userName = {dialogData[3].userName} id = {dialogData[3].id}/>
-                    <Dialog userName = {dialogData[4].userName} id = {dialogData[4].id}/>
-                    <Dialog userName = {dialogData[5].userName} id = {dialogData[5].id}/>
-                    <Dialog userName = {dialogData[6].userName} id = {dialogData[6].id}/>
-                    <Dialog userName = {dialogData[7].userName} id = {dialogData[7].id}/>
-                    <Dialog userName = {dialogData[8].userName} id = {dialogData[8].id}/>
-                    <Dialog userName = {dialogData[9].userName} id = {dialogData[9].id}/>
-                          
+                    {dialogs}                   
                 </div>
                 <Line />
                 <div className = {classes.messages}>
-
-                    <Message message = {messagesData[0].message}/>
-                    <Message message = {messagesData[1].message}/>
-                    <Message message = {messagesData[2].message}/>         
-
+                    {messages}
                 </div>
-
             </div>
         </BrowserRouter>
     );

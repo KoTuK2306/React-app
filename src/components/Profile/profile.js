@@ -14,6 +14,9 @@ const postData = [
 ]
 
 
+const post = postData
+.map(postData => <NewPost likesCount = {postData.likesCount} message = {postData.message}/>);
+
 const Profile = () =>{
     return (
         <div className = {classes.profile}>
@@ -23,9 +26,7 @@ const Profile = () =>{
                 <Description />
                 <p>My posts</p>
                 <MyPosts /> 
-                <NewPost likesCount = {postData[0].likesCount} message = {postData[0].message}/>
-                <NewPost likesCount = {postData[1].likesCount} message = {postData[1].message}/>
-                <NewPost likesCount = {postData[2].likesCount} message = {postData[2].message}/>
+                {post}
             </div>
    
         </div>
