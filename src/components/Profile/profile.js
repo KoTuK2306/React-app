@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './profile.module.css';
 import ProfileBackground from './../Profile/ProfileBackground/profile-background'
 import Description from './../Profile/ProfileIformation/Description/description'
-import NewPost from '../Profile/NewPost/new-post';
+import Post from '../Profile/Post/post';
 import MyPosts from '../Profile/MyPosts/my-posts';
 
 
@@ -15,7 +15,7 @@ const postData = [
 
 
 const post = postData
-.map(postData => <NewPost likesCount = {postData.likesCount} message = {postData.message}/>);
+.map(postData => <Post likesCount = {postData.likesCount} message = {postData.message}/>);
 
 const Profile = () =>{
     return (

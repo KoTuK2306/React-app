@@ -3,9 +3,7 @@ import classes from './profileBackground.module.css';
 
 const ProfileBackground = () => {
     return(
-        <div className = {classes.img}>
-
-        </div>
+        <div className = {classes.img}></div>
     );
 } 
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from './newPost.module.css';
-import Like from './../NewPost/Like/like'
+import classes from './post.module.css';
+import Like from './../Post/Like/like'
 
-const NewPost = ({message, likesCount}) =>{
+const Post = ({message, likesCount}) =>{
     return(
         <div className = {classes.posts}>
             <div className = {classes.postContent}> 
@@ -16,4 +16,4 @@ const NewPost = ({message, likesCount}) =>{
     );
 }
 
-export default NewPost;
+export default Post;
