@@ -5,6 +5,15 @@ import Description from './../Profile/ProfileIformation/Description/description'
 import NewPost from '../Profile/NewPost/new-post';
 import MyPosts from '../Profile/MyPosts/my-posts';
 
+
+const postData = [
+    {id: 1, likesCount: 23, message: 'My second post'},
+    {id: 2, likesCount: 4, message: 'Beatiful day'},
+    {id: 2, likesCount: 68, message: 'You\'re beatiful'}
+
+]
+
+
 const Profile = () =>{
     return (
         <div className = {classes.profile}>
@@ -14,8 +23,9 @@ const Profile = () =>{
                 <Description />
                 <p>My posts</p>
                 <MyPosts /> 
-                <NewPost likesCount = {23} message = 'My second post'/>
-                <NewPost likesCount = {4} message = 'Beatiful day'/>
+                <NewPost likesCount = {postData[0].likesCount} message = {postData[0].message}/>
+                <NewPost likesCount = {postData[1].likesCount} message = {postData[1].message}/>
+                <NewPost likesCount = {postData[2].likesCount} message = {postData[2].message}/>
             </div>
    
         </div>
