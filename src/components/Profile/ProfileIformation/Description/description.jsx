@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './description.module.css';
-import Ava from './../Avatar/ava';
-import DescriptionItem from '../Description/DescriptionItem/description-item'
+import Ava from '../Avatar/ava';
+import DescriptionItem from './DescriptionItem/description-item'
 
 
 const Description = () =>{

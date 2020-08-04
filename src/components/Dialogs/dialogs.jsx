@@ -1,9 +1,9 @@
 import React from 'react';
+import { NavLink, BrowserRouter, Route } from 'react-router-dom';
 import classes from './dialogs.module.css';
 import Line from './Line/line';
-import Dialog from './../Dialogs/Dialog/dialog';
-import Message from './../Dialogs/Message/message';
-import { NavLink, BrowserRouter, Route } from 'react-router-dom';
+import Dialog from './Dialog/dialog';
+import Message from './Message/message';
 
 const Dialogs = (props) =>{
     

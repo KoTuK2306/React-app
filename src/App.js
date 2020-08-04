@@ -1,12 +1,12 @@
 import React from 'react';
 import classes from './App.module.css';
-import Header from './components/Header/header';
-import Navbar from './components/Navbar/navbar';
-import Profile from './components/Profile/profile';
-import Dialogs from './components/Dialogs/dialogs';
-import News from './components/News/news';
-import Music from '../src/components/Music/music';
-import Settings from './components/Settings/settings';
+import Header from './../src/components/Header/header';
+import Navbar from './../src/components/Navbar/navbar';
+import Profile from './../src/components/Profile/profile';
+import Dialogs from './../src/components/Dialogs/dialogs';
+import News from './../src/components/News/news';
+import Music from './../src/components/Music/music';
+import Settings from './../src/components/Settings/settings';
 import { Route } from 'react-router-dom';
 import {BrowserRouter, route} from 'react-router-dom'
 

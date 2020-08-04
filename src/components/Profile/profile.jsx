@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './profile.module.css';
-import ProfileBackground from './../Profile/ProfileBackground/profile-background'
-import Description from './../Profile/ProfileIformation/Description/description'
-import Post from '../Profile/Post/post';
-import MyPosts from '../Profile/MyPosts/my-posts';
+import ProfileBackground from './ProfileBackground/profile-background'
+import Description from './ProfileIformation/Description/description'
+import Post from './Post/post';
+import MyPosts from './MyPosts/my-posts';
 
 
 const postData = [

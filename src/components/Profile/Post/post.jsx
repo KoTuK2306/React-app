@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './post.module.css';
-import Like from './../Post/Like/like'
+import Like from './../../Profile/Post/Like/like'
 
 const Post = ({message, likesCount}) =>{
     return(
