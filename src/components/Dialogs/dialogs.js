@@ -2,15 +2,8 @@ import React from 'react';
 import classes from './dialogs.module.css';
 import Line from './Line/line';
 import Dialog from './../Dialogs/Dialog/dialog';
+import Message from './../Dialogs/Message/message';
 import { NavLink, BrowserRouter, Route } from 'react-router-dom';
-
-const Message = ({message}) =>{
-    return(
-        <div className = {classes.message}>
-            {message}
-        </div>
-    );
-}
 
 const Dialogs = (props) =>{
     
