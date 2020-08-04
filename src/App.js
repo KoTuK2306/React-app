@@ -8,7 +8,7 @@ import News from './../src/components/News/news';
 import Music from './../src/components/Music/music';
 import Settings from './../src/components/Settings/settings';
 import { Route } from 'react-router-dom';
-import {BrowserRouter, route} from 'react-router-dom'
+import {BrowserRouter, route} from 'react-router-dom';
 
 const App = (props) => {
   return (
@@ -19,7 +19,7 @@ const App = (props) => {
         <Navbar />
         <div className = {classes.contentItem}>
           <Route exact path = '/dialogs' render = { () => <Dialogs /> }/>
-          <Route path = '/profile' render = { () => <Profile /> }/>
+          <Route path = '/profile' render = { () => <Profile postData = {props.postData} /> }/>
           <Route path = '/news' render = { () => <News /> }/>
           <Route path = '/music' render = { () => <Music /> }/>
           <Route path = '/settings' render = { () => <Settings /> }/>

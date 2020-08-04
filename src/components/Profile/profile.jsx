@@ -5,19 +5,11 @@ import Description from './ProfileIformation/Description/description'
 import Post from './Post/post';
 import MyPosts from './MyPosts/my-posts';
 
+const Profile = (props) =>{
+    
+    const post = props.postData
+    .map(postData => <Post likesCount = {postData.likesCount} message = {postData.message}/>);
 
-const postData = [
-    {id: 1, likesCount: 23, message: 'My second post'},
-    {id: 2, likesCount: 4, message: 'Beatiful day'},
-    {id: 2, likesCount: 68, message: 'You\'re beatiful'}
-
-]
-
-
-const post = postData
-.map(postData => <Post likesCount = {postData.likesCount} message = {postData.message}/>);
-
-const Profile = () =>{
     return (
         <div className = {classes.profile}>
 
