@@ -1,0 +1,12 @@
+.dialog{
+    margin: 15px 0 15px 0;
+    transition: all 0.5s ease-in;
+}
+
+.dialogItem:hover{
+    color: rgb(255, 93, 93)
+}
+
+.active2{
+    color: rgb(255, 93, 93)
+}

@@ -1,16 +1,8 @@
 import React from 'react';
 import classes from './dialogs.module.css';
 import Line from './Line/line';
+import Dialog from './../Dialogs/Dialog/dialog';
 import { NavLink, BrowserRouter, Route } from 'react-router-dom';
-
-const Dialog = ({userName, id}) =>{
-    const path = '/dialogs/' + id;
-    return(
-            <div className = {classes.dialog}>
-                <NavLink className = {classes.dialogItem} to = {path} activeClassName = {classes.active2}>{userName}</NavLink>
-            </div> 
-    );
-}
 
 const Message = ({message}) =>{
     return(
@@ -32,7 +24,8 @@ const Dialogs = (props) =>{
         {id: 7, userName: 'Anton'},
         {id: 8, userName: 'Artem'},
         {id: 9, userName: 'Artur'},
-        {id: 10, userName: 'Boris'}
+        {id: 10, userName: 'Boris'},
+        {id: 11, userName: 'Evgeniy'}
     ]
 
     const messagesData = [
