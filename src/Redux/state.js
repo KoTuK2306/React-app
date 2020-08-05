@@ -12,22 +12,21 @@ const state = {
             {id: 1, userName: 'Dmitriy'},
             {id: 2, userName: 'Nikolay'},
             {id: 3, userName: 'Alexey'},
-            {id: 4, userName: 'Pavel'},
-            {id: 5, userName: 'Alex'},
-            {id: 6, userName: 'Andrey'},
-            {id: 7, userName: 'Anton'},
-            {id: 8, userName: 'Artem'},
-            {id: 9, userName: 'Artur'},
-            {id: 10, userName: 'Boris'},
-            {id: 11, userName: 'Evgeniy'}
         ],
     
-        messagesData:[
-            {id: 1, message: 'Hi!'},
-            {id: 2, message: 'What do you think about a weather today?'},
-            {id: 3, message: 'Oh, this is bullshit'},
+        messagesData: [
+            {id: 1, message: 'Hi!', author: 'dmitriy2306'},
+            {id: 2, message: 'What do you think about a weather today?', author: 'dimonZaklinatelGovna'},
+            {id: 3, message: 'Oh, this is bullshit', author: 'dmitriy2306'},
         ]
-    }
+    },
+
+    profiles: [
+        {id: 'dmitriy2306'},
+        {id: 'dimonZaklinatelGovna'},
+        {id: 'nikolayNikolayKolya'},
+        {id: 'lexaLepexa'}
+    ]
 }
 
 export default state;

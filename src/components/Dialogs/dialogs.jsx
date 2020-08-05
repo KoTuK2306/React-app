@@ -12,6 +12,9 @@ const Dialogs = (props) =>{
 
     const messages = props.state.messagesData
     .map (message => <Message message = {message.message}/>)
+
+    
+
         return(
             <BrowserRouter>
                 <div className = {classes.dialogs}>
