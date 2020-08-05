@@ -11,7 +11,7 @@ const Dialogs = (props) =>{
     .map(dialog => <Dialog userName = {dialog.userName} id = {dialog.id}/>);
 
     const messages = props.state.messagesData
-    .map (message => <Message message = {message.message}/>)
+    .map (message => <Message me = {message.author === 'dmitriy2306' ? true : false} message = {message.message}/>)
 
     
 

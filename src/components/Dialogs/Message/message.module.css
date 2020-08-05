@@ -1,6 +1,8 @@
 .message{
-    display: flex;
-    text-align: left;
-    margin: 5px 0 5px 0;
-    justify-items: flex-start;
+    margin: 5px 0 5px 10px;
+    align-self: flex-start;
+}
+
+.me{
+    align-self: flex-end;
 }
