@@ -7,7 +7,7 @@ import MyPosts from './MyPosts/my-posts';
 
 const Profile = (props) =>{
     
-    const post = props.postData
+    const post = props.state.postData
     .map(postData => <Post likesCount = {postData.likesCount} message = {postData.message}/>);
 
     return (

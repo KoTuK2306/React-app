@@ -7,10 +7,10 @@ import Message from './Message/message';
 
 const Dialogs = (props) =>{
 
-    const dialogs = props.dialogsData
+    const dialogs = props.state.dialogsData
     .map(dialog => <Dialog userName = {dialog.userName} id = {dialog.id}/>);
 
-    const messages = props.messagesData
+    const messages = props.state.messagesData
     .map (message => <Message message = {message.message}/>)
         return(
             <BrowserRouter>
