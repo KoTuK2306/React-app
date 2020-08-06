@@ -2,6 +2,7 @@
     margin: 20px 0 0 20px;
     display: grid;
     grid-template-columns: 3fr 3px 7fr;
+    min-height: 83vh;
 }
 
 .dialogsItem{
