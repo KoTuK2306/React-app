@@ -1,6 +1,8 @@
 @font-face {
     font-family: Mulish;
     src: url(./components/Fonts/Mulish-ExtraLightItalic.ttf);
+    font-family: Raleway;
+    src: url(./components/Fonts/Raleway-ThinItalic.ttf)
 }
 
 .content{
@@ -11,7 +13,7 @@
     grid-template-rows: 50px 1fr;
     grid-template-columns: 120px 10fr;
     font-size: 15px;
-    font-family: Mulish;
+    font-family: Mulish, Raleway;
     color: rgb(196, 196, 196);  
     background-color: rgb(157, 63, 245);
 }
