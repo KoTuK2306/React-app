@@ -17,7 +17,9 @@ const Profile = (props) =>{
             <div className = {classes.aboutProfile}>
                 <Description />
                 <p>My posts</p>
-                <MyPosts addPost = {props.addPost}/> 
+                <MyPosts addPost = {props.addPost}
+                    newPostText = {props.state.newPostText}
+                    updateNewPostText = {props.updateNewPostText}/> 
                 {post}
             </div>
    

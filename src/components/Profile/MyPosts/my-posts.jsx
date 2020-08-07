@@ -2,27 +2,27 @@ import React, {useState} from 'react';
 import classes from './myPosts.module.css';
 
 const MyPosts = (props) =>{
-    const [value, setValue] = useState("")
-    const onChange = (inputValue) => {
-        setValue(inputValue)
-    }
     const newPostElement = React.createRef();    
+
     const addPost = () =>{
+/*         const postText = newPostElement.current.value; */
+        props.addPost();
+/*         props.updateNewPostText(''); */
+    }
+
+    const onPostChange = () =>{
         const postText = newPostElement.current.value;
-        props.addPost(postText);
-        setValue('');
+        props.updateNewPostText(postText);
     }
 
     return(
         <div className = {classes.myPosts}>
-            <input 
-            type = "text"
+            <textarea 
             ref = {newPostElement}
-            name = "text"
-            value={value}
-            placeholder = "Enter your post"
-            onChange = {(event) => onChange(event.target.value)}
-            className = {classes.input} />
+            onChange = {onPostChange}
+            value = {props.newPostText}
+            className = {classes.input} 
+            maxLength = '500'/>
             <div onClick = {addPost} className = {classes.button}>Add post</div>
         </div>
     );

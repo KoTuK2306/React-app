@@ -24,7 +24,7 @@ const Dialogs = (props) =>{
                     <Line />
                     <div className = {classes.messages}>
                         {messages}
-                        <textarea className = {classes.textarea}></textarea>
+                        <textarea className = {classes.textarea} />
                         <div className = {classes.button}>Send</div>
                     </div>
                     
