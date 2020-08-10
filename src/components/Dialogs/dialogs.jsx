@@ -9,11 +9,8 @@ const Dialogs = (props) =>{
 
     const dialogs = props.state.dialogsData
     .map(dialog => <Dialog userName = {dialog.userName} id = {dialog.id}/>);
-
     const messages = props.state.messagesData
     .map (message => <Message me = {message.author === 'dmitriy2306' ? true : false} message = {message.message}/>)
-
-    
 
         return(
             <BrowserRouter>
