@@ -7,7 +7,7 @@ import Dialogs from './../src/components/Dialogs/dialogs';
 import News from './../src/components/News/news';
 import Music from './../src/components/Music/music';
 import Settings from './../src/components/Settings/settings';
-import { Route } from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import {BrowserRouter, route} from 'react-router-dom';
 
 const App = (props) => {

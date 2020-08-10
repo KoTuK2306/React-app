@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, BrowserRouter, Route } from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import classes from './dialogs.module.css';
 import Line from './Line/line';
 import Dialog from './Dialog/dialog';

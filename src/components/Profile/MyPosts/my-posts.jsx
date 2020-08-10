@@ -1,13 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from './myPosts.module.css';
 
 const MyPosts = (props) =>{
     const newPostElement = React.createRef();    
 
     const addPost = () =>{
-/*         const postText = newPostElement.current.value; */
         props.addPost();
-/*         props.updateNewPostText(''); */
     }
 
     const onPostChange = () =>{

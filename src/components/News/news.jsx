@@ -3,7 +3,7 @@ import classes from './news.module.css'
 
 const News = () =>{
     return(
-        <div>
+        <div className = {classes.news}>
             News
         </div>
     );
