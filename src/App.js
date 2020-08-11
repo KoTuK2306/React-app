@@ -20,10 +20,13 @@ const App = (props) => {
         <Navbar />
         <div className = {classes.contentItem}>
 
-          <Route exact path = '/dialogs' render = { () => <Dialogs state = {props.state.messagesPage}/> }/>
+          <Route exact path = '/dialogs' render = { () => <Dialogs state = {props.state.messagesPage}
+           dispatch = {props.dispatch}
+           store = {props.store}/> }/>
           <Route path = '/profile' render = { () => <Profile 
             state = {props.state.profilePage} 
-            dispatch = {props.dispatch}/> }/>
+            dispatch = {props.dispatch}/> }
+            store = {props.store}/>
           <Route path = '/news' render = { () => <News /> }/>
           <Route path = '/music' render = { () => <Music /> }/>
           <Route path = '/settings' render = { () => <Settings /> }/>

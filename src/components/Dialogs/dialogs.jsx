@@ -4,13 +4,29 @@ import classes from './dialogs.module.css';
 import Line from './Line/line';
 import Dialog from './Dialog/dialog';
 import Message from './Message/message';
+import {updateMessageCreator, sendMessageCreator} from './../../Redux/state';
 
 const Dialogs = (props) =>{
 
-    const dialogs = props.state.dialogsData
+    let state = props.store.getState().messagesPage;
+
+    const dialogs = state.dialogsData
     .map(dialog => <Dialog userName = {dialog.userName} id = {dialog.id}/>);
-    const messages = props.state.messagesData
+    const messages = state.messagesData
     .map (message => <Message me = {message.author === 'dmitriy2306' ? true : false} message = {message.message}/>)
+
+    let newMessageText = state.newMessageText;
+    
+
+    const onSendMessageClick = () =>{
+        props.store.dispatch(sendMessageCreator());
+    }
+
+    const onNewMessageChange = (event) =>{
+        let body = event.target.value;
+        props.store.dispatch(updateMessageCreator(body));
+
+    }
 
         return(
             <BrowserRouter>
@@ -21,10 +37,14 @@ const Dialogs = (props) =>{
                     <Line />
                     <div className = {classes.messages}>
                         {messages}
-                        <textarea className = {classes.textarea} />
-                        <div className = {classes.button}>Send</div>
                     </div>
                     
+                </div>
+                <div className = {classes.inputArea}>
+                    <textarea value = {newMessageText}
+                    className = {classes.textarea}
+                    onChange = {onNewMessageChange}/>
+                    <div onClick = {onSendMessageClick} className = {classes.button}>Send</div>
                 </div>
                 
             </BrowserRouter>
