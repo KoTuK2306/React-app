@@ -9,10 +9,12 @@ const MyPosts = (props) =>{
         props.dispatch(action);
     }
 
-    const onPostChange = () =>{
+    const onPostChange = ({target}) =>{
         const postText = newPostElement.current.value;
         const action = {type: 'UPDATE-NEW-POST-TEXT', newText: postText};
         props.dispatch(action);
+        target.style.height = 'auto';
+        target.style.height = target.scrollHeight + 'px';
     }
 
     return(

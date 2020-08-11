@@ -25,8 +25,8 @@
     font-family: Mulish, Raleway;
     color: rgb(70, 70, 70);
     transition: all 0.3s ease-in;
-
-    overflow: auto;
+    resize: none;
+    overflow: hidden;
 }
 
 .input:focus{
@@ -57,7 +57,5 @@
 .button:hover{
     color: black;
     background: rgb(255, 187, 0);
-    height: 25px;
-    width: 75px;
     border: 1px solid rgb(255, 187, 0);
 }            
