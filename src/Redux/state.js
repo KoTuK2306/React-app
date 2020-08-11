@@ -1,7 +1,5 @@
-const addPost = 'ADD-POST';
-const updateNewPostText = 'UPDATE-NEW-POST-TEXT';
-const updateNewMessageText = 'UPDATE-NEW-MESSAGE-TEXT';
-const sendMessage = 'SEND-MESSAGE';
+import messagesReducer from './messagesReducer';
+import profileReducer from './profileReducer';
 
 let store = {
     _state: {
@@ -34,7 +32,8 @@ let store = {
             {id: 'dimonZaklinatelGovna'},
             {id: 'nikolayNikolayKolya'},
             {id: 'lexaLepexa'}
-        ]
+        ],
+        
     },
     _callSubscriber() {
         console.log('State changed');
@@ -47,35 +46,10 @@ let store = {
     },
 
     dispatch(action){
-        if (action.type === addPost){
-            const newPost = {
-                id: 5,
-                message: this._state.profilePage.newPostText,
-                likesCount: 0
-            }
-            this._state.profilePage.newPostText = '';
-            this._state.profilePage.postData.push(newPost);
-            this._callSubscriber(this._state);
-
-        } else if (action.type === updateNewPostText){
-            this._state.profilePage.newPostText = action.newText;
-            this._callSubscriber(this._state);
-
-        } else if (action.type === updateNewMessageText){
-            this._state.messagesPage.newMessageText = action.newMessage;
-            this._callSubscriber(this._state);
-
-        } else if (action.type === sendMessage){
-            let body = this._state.messagesPage.newMessageText;
-            this._state.messagesPage.newMessageText = '';
-            this._state.messagesPage.messagesData.push({id: 6, message: body, author: 'dimonZaklinatelGovna'});
-            this._callSubscriber(this._state);
-        }
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.messagesPage = messagesReducer(this._state.messagesPage, action);
+        this._callSubscriber(this._state);
     }
 }
-
-export const sendMessageCreator = () => ({type: sendMessage})
-export const updateMessageCreator = (body) => ({type: updateNewMessageText, newMessage: body})
-
 
 export default store;
