@@ -3,14 +3,15 @@ import classes from './myPosts.module.css';
 
 const MyPosts = (props) =>{
     
-    const newPostElement = React.createRef();  
-    debugger;  
+    const newPostElement = React.createRef(); 
     const onAddPost = () =>{
         props.addPost();
     }
-    const onPostChange = () =>{
+    const onPostChange = (e) =>{
         const postText = newPostElement.current.value;
-        props.updateNewPostText(postText);        
+        props.updateNewPostText(postText);
+        e.target.style.height = 'auto';
+        e.target.style.height = e.target.scrollHeight + 'px';  
     }
     return(
         <div className = {classes.myPosts}>

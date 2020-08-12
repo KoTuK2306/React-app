@@ -3,7 +3,7 @@ import classes from './profile.module.css';
 import ProfileBackground from './ProfileBackground/profile-background'
 import Description from './ProfileIformation/Description/description'
 import Post from './Post/post';
-import MyPostsContainer from './MyPosts/my-posts';
+import MyPostsContainer from './MyPosts/my-postsContainer';
 
 const Profile = (props) =>{
     
@@ -17,7 +17,7 @@ const Profile = (props) =>{
             <div className = {classes.aboutProfile}>
                 <Description />
                 <p>My posts</p>
-                <MyPostsContainer newPostText = {props.state.newPostText}
+                <MyPostsContainer store = {props.store} newPostText = {props.state.newPostText}
                             dispatch = {props.dispatch}/> 
                 {post}
             </div>

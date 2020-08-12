@@ -9,11 +9,9 @@ const MyPostsContainer = (props) =>{
     let onPostChange = (postText) =>{
         const action = {type: 'UPDATE-NEW-POST-TEXT', newText: postText};
         props.store.dispatch(action);
-        target.style.height = 'auto';
-        target.style.height = target.scrollHeight + 'px';
     }
     return(
-        <MyPosts updateNewPostText = {onPostChange} addPost = {addPost} newPostText = {props.state.newPostText}/>
+        <MyPosts updateNewPostText = {onPostChange} addPost = {addPost} newPostText = {props.newPostText}/>
     );
 }
 
