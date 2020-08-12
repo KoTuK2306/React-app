@@ -16,7 +16,6 @@ let initialState = {
     newMessageText: ''
 }
 
-
 const messagesReducer = (state = initialState, action) =>{
     switch(action.type){
         case updateNewMessageText:

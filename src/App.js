@@ -25,8 +25,7 @@ const App = (props) => {
            store = {props.store}/> }/>
           <Route path = '/profile' render = { () => <Profile 
             state = {props.state.profilePage} 
-            dispatch = {props.dispatch}/> }
-            store = {props.store}/>
+            dispatch = {props.dispatch} store = {props.store}/>}/>
           <Route path = '/news' render = { () => <News /> }/>
           <Route path = '/music' render = { () => <Music /> }/>
           <Route path = '/settings' render = { () => <Settings /> }/>
