@@ -5,7 +5,7 @@ const Like = (props) => {
     return(
         <div className = {classes.like}>
                 <img className = {classes.likeItem}
-                src = 'https://visualpharm.com/assets/783/Facebook%20Like-595b40b65ba036ed117d1f0f.svg'/>
+                src = 'https://visualpharm.com/assets/783/Facebook%20Like-595b40b65ba036ed117d1f0f.svg' alt = ''/>
                 {props.likesCount}
         </div>
     );

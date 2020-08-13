@@ -1,5 +1,4 @@
 import React from 'react';
-import classes from './descriptionItem.module.css';
 
 const DescriptionItem = () =>{
     return(

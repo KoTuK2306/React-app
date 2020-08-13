@@ -10,9 +10,10 @@ const Dialogs = (props) =>{
     let state = props.messagesPage;
 
     const dialogs = state.dialogsData
-    .map(dialog => <Dialog userName = {dialog.userName} id = {dialog.id}/>);
+    .map(dialog => <Dialog userName = {dialog.userName} id = {dialog.id}
+    key = {dialog.id}/>);
     const messages = state.messagesData
-    .map (message => <Message me = {message.author === 'dmitriy2306' ? true : false} message = {message.message}/>)
+    .map (message => <Message me = {message.author === 'dmitriy2306' ? true : false} message = {message.message} key = {message.id}/>)
 
     let newMessageText = state.newMessageText;
     

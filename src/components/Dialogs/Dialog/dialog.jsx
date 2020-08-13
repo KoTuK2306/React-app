@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, BrowserRouter, Route } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import classes from './dialog.module.css';
 
 const Dialog = ({userName, id}) =>{
