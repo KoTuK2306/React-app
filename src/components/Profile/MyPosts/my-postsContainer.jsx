@@ -11,7 +11,7 @@ const MyPostsContainer = (props) =>{
         props.store.dispatch(action);
     }
     return(
-        <MyPosts updateNewPostText = {onPostChange} addPost = {addPost} newPostText = {props.newPostText}/>
+        <MyPosts updateNewPostText = {onPostChange} addPost = {addPost} newPostText = {props.store.getState().profilePage.newPostText}/>
     );
 }
 

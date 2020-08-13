@@ -9,7 +9,7 @@ import './index.css';
 let rerenderEntireTree = () => {
     ReactDOM.render(
       <React.StrictMode>
-        <App state = {store.getState()} store = {store}/>
+        <App store = {store}/>
       </React.StrictMode>,
       document.getElementById('root')
     );

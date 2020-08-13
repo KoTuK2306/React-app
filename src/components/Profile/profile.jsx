@@ -7,21 +7,18 @@ import MyPostsContainer from './MyPosts/my-postsContainer';
 
 const Profile = (props) =>{
     
-    const post = props.state.postData
+    const post = props.store.getState().profilePage.postData
     .map(postData => <Post likesCount = {postData.likesCount} message = {postData.message}/>);
 
     return (
         <div className = {classes.profile}>
-
             <ProfileBackground />
             <div className = {classes.aboutProfile}>
                 <Description />
                 <p>My posts</p>
-                <MyPostsContainer store = {props.store} newPostText = {props.state.newPostText}
-                            dispatch = {props.dispatch}/> 
+                <MyPostsContainer store = {props.store}/> 
                 {post}
             </div>
-   
         </div>
     );
 }
