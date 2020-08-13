@@ -3,7 +3,7 @@ import classes from './App.module.css';
 import Header from './../src/components/Header/header';
 import Navbar from './../src/components/Navbar/navbar';
 import Profile from './../src/components/Profile/profile';
-import Dialogs from './../src/components/Dialogs/dialogs';
+import DialogsContainer from './../src/components/Dialogs/dialogsContainer';
 import News from './../src/components/News/news';
 import Music from './../src/components/Music/music';
 import Settings from './../src/components/Settings/settings';
@@ -20,15 +20,11 @@ const App = (props) => {
         <Navbar />
         <div className = {classes.contentItem}>
 
-          <Route exact path = '/dialogs' render = { () => <Dialogs state = {props.state.messagesPage}
-           dispatch = {props.dispatch}
-           store = {props.store}/> }/>
-          <Route path = '/profile' render = { () => <Profile 
-            state = {props.state.profilePage} 
-            dispatch = {props.dispatch} store = {props.store}/>}/>
-          <Route path = '/news' render = { () => <News /> }/>
-          <Route path = '/music' render = { () => <Music /> }/>
-          <Route path = '/settings' render = { () => <Settings /> }/>
+          <Route exact path = '/dialogs' render = { () => <DialogsContainer store={props.store}/>}/>
+          <Route path = '/profile' render = { () => <Profile state={props.state.profilePage} store={props.store}/>}/>
+          <Route path = '/news' render = { () => <News />}/>
+          <Route path = '/music' render = { () => <Music />}/>
+          <Route path = '/settings' render = { () => <Settings />}/>
         </div>
     
       </div>
