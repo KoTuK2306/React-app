@@ -9,7 +9,7 @@ import Music from './../src/components/Music/music';
 import Settings from './../src/components/Settings/settings';
 import {BrowserRouter, Route} from 'react-router-dom';
 
-const App = () => {
+const App = (props) => {
 
   return (
     <BrowserRouter>
@@ -20,7 +20,7 @@ const App = () => {
         <div className = {classes.contentItem}>
 
           <Route exact path = '/dialogs' render = { () => <DialogsContainer />}/>
-          <Route path = '/profile' render = { () => <Profile />}/>
+          <Route path = '/profile' render = { () => <Profile store = {props.store}/>}/>
           <Route path = '/news' render = { () => <News />}/>
           <Route path = '/music' render = { () => <Music />}/>
           <Route path = '/settings' render = { () => <Settings />}/>

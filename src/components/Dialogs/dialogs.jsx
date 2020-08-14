@@ -6,28 +6,23 @@ import Dialog from './Dialog/dialog';
 import Message from './Message/message';
 
 const Dialogs = (props) =>{
-
     let state = props.messagesPage;
-
     const dialogs = state.dialogsData
     .map(dialog => <Dialog userName = {dialog.userName} id = {dialog.id}
     key = {dialog.id}/>);
     const messages = state.messagesData
-    .map (message => <Message me = {message.author === 'dmitriy2306' ? true : false} message = {message.message} key = {message.id}/>)
-
+    .map (message => <Message me = {message.author === 'dmitriy2306' ? true : false} 
+                              message = {message.message} 
+                              key = {message.id}/>)
     let newMessageText = state.newMessageText;
-    
-
     const onSendMessageClick = () =>{
         props.sendMessage();
     }
-
     const onNewMessageChange = (e) =>{
         let body = e.target.value;
         props.messageChange(body);
 
     }
-
         return(
             <BrowserRouter>
                 <div className = {classes.dialogs}>

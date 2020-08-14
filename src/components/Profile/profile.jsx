@@ -11,7 +11,7 @@ const Profile = (props) =>{
             <div className = {classes.aboutProfile}>
                 <Description />
                 <p>My posts</p>
-                <MyPostsContainer /> 
+                <MyPostsContainer store = {props.store}/> 
             </div>
         </div>
     );
