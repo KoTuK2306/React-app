@@ -1,18 +1,34 @@
 import React from 'react';
 import MyPosts from './my-posts';
+import StoreContext from '../../../storeContext';
+import Post from './../Post/post';
 
 const MyPostsContainer = (props) =>{
-    let addPost = () =>{
-        const action = {type: 'ADD-POST'};
-        props.store.dispatch(action);
-    }
-    let onPostChange = (postText) =>{
-        const action = {type: 'UPDATE-NEW-POST-TEXT', newText: postText};
-        props.store.dispatch(action);
-    }
     return(
-        <MyPosts updateNewPostText = {onPostChange} addPost = {addPost} newPostText = {props.store.getState().profilePage.newPostText}/>
-    );
+        <StoreContext.Consumer>
+            {(store) => {
+                const post = store.getState().profilePage.postData.map(postData =>
+                    <Post likesCount = {postData.likesCount} message = {postData.message}/>);
+                let addPost = () =>{
+                    const action = {type: 'ADD-POST'};
+                    store.dispatch(action);
+                }
+                let onPostChange = (postText) =>{
+                    const action = {type: 'UPDATE-NEW-POST-TEXT', newText: postText};
+                    store.dispatch(action);
+                }
+                return(
+                    <div>
+                        <MyPosts updateNewPostText = {onPostChange}
+                             addPost = {addPost}
+                             newPostText = {store.getState().profilePage.newPostText}/>
+                        {post}
+                    </div>
+                )
+            }
+        }
+        </StoreContext.Consumer>
+    )
 }
-
+            
 export default MyPostsContainer;

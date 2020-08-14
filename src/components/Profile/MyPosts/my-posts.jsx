@@ -1,8 +1,7 @@
 import React from 'react';
 import classes from './myPosts.module.css';
 
-const MyPosts = (props) =>{
-    
+const MyPosts = (props) =>{   
     const newPostElement = React.createRef(); 
     const onAddPost = () =>{
         props.addPost();
@@ -23,6 +22,7 @@ const MyPosts = (props) =>{
             className = {classes.input} 
             maxLength = '500'/>
             <div onClick = {onAddPost} className = {classes.button}>Add post</div>
+            
         </div>
     );
 }
