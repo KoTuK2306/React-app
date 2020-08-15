@@ -17,15 +17,20 @@ let initialState = {
 }
 
 const messagesReducer = (state = initialState, action) =>{
+
+    let stateCopy = {
+        ...state,
+        messagesData: [...state.messagesData]    
+    };   
     switch(action.type){
         case updateNewMessageText:
-            state.newMessageText = action.newMessage;
-            return state;
+            stateCopy.newMessageText = action.newMessage;
+            return stateCopy;
         case sendMessage: 
-            let body = state.newMessageText;
-            state.newMessageText = '';
-            state.messagesData.push({id: 6, message: body, author: 'dimonZaklinatelGovna'});
-            return state;
+            let body = stateCopy.newMessageText;
+            stateCopy.newMessageText = '';
+            stateCopy.messagesData.push({id: 6, message: body, author: 'dimonZaklinatelGovna'});
+            return stateCopy;
         default: 
             return state;
     }
@@ -33,5 +38,4 @@ const messagesReducer = (state = initialState, action) =>{
 
 export const sendMessageCreator = () => ({type: sendMessage})
 export const updateMessageCreator = (body) => ({type: updateNewMessageText, newMessage: body})
-
 export default messagesReducer;
