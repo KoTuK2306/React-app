@@ -7,7 +7,8 @@ import store from '../../../Redux/reduxStore';
 const mapStateToProps = (state) => {
     return{
         newPostText: state.profilePage.newPostText,
-        state: store.getState
+        state: store.getState,
+        postData: state.profilePage.postData
     }
 }
 const mapDispatchToProp = (dispatch) => {

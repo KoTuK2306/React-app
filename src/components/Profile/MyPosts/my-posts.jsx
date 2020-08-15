@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from './myPosts.module.css';
-import Post from './../Post/post'
+import Post from './../Post/post';
 
 const MyPosts = (props) =>{ 
-    const post = props.store.getState().profilePage.postData.map(postData =>
-        <Post likesCount = {postData.likesCount} message = {postData.message}/>); 
+    const post = props.postData.map(postData =>
+        <Post likesCount = {postData.likesCount} message = {postData.message} key = {postData.message}/>); 
     const newPostElement = React.createRef(); 
     const onAddPost = () =>{
         props.addPost();
