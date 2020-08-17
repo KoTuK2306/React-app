@@ -9,9 +9,9 @@ const Users = (props) =>{
         photoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTodTGYqOI6A5y8uxf_6FZeUTwHg7BOyUSVEw&usqp=CAU',
         followed: true,
         firstName: 'Dmitriy',
-        secondName: 'Aleshin',
+        secondName: ' Aleshin',
         status: 'I\'m a programmist',
-        country: 'Russia',
+        country: 'Russia,',
         city: 'Tver'
     },
     {
@@ -19,9 +19,9 @@ const Users = (props) =>{
         photoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTodTGYqOI6A5y8uxf_6FZeUTwHg7BOyUSVEw&usqp=CAU',
         followed: false,
         firstName: 'Alexey',
-        secondName: 'Stolyarov',
+        secondName: ' Stolyarov',
         status: 'You are the best',
-        country: 'Russia',
+        country: 'Russia,',
         city: 'Moscow'
     },
     {
@@ -29,9 +29,9 @@ const Users = (props) =>{
         photoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTodTGYqOI6A5y8uxf_6FZeUTwHg7BOyUSVEw&usqp=CAU',
         followed: true,
         firstName: 'Alexandr',
-        secondName: 'Ivanov',
+        secondName: ' Ivanov',
         status: 'Just a status',
-        country: 'Ukraine',
+        country: 'Ukraine,',
         city: 'Kiev'
     }])
 }
@@ -39,27 +39,31 @@ const Users = (props) =>{
     return(<div>{
         
             props.users.map(u => <div key = {u.id}>
-            
-                <span>
-                    <div>
-                        <img className = {classes.userPhoto} src = {u.photoUrl} alt = ''/>
+                <div className = {classes.user}>
+                    <div className = {classes.userAva}>
+                        <div>
+                            <img className = {classes.userPhoto} src = {u.photoUrl} alt = ''/>
+                        </div>
+                        <div>
+                            {u.followed 
+                            ?<div className = {classes.button} onClick = {()=>{props.unfollow(u.id)}}>Unfollow</div>
+                            :<div className = {classes.button} onClick = {()=>{props.follow(u.id)}}>Follow</div>}   
+                        </div>
                     </div>
-                    <div>
-                        {u.followed 
-                        ?<button onClick = {()=>{props.unfollow(u.id)}}>unfollow</button>
-                        :<button onClick = {()=>{props.follow(u.id)}}>follow</button>}
-                        
+                    <div className = {classes.userInfo}>
+                        <div className = {classes.userInfoItem}>
+                            <div className = {classes.userName}>
+                                {u.firstName + '' + u.secondName}
+                                <div className = {classes.userLocation}>
+                                    {u.country + '' + u.city}
+                                </div>
+                            </div>
+                            <div>
+                                {u.status}
+                            </div>
+                        </div>
                     </div>
-                </span>
-                <span>
-                    <span>
-                        <div>{u.firstName + '' + u.secondName}</div><div>{u.status}</div>
-                    </span>
-                    <span>
-                <div>{u.country}</div><div>{u.city}</div>
-                    </span>
-                </span>
-            
+                </div>
             </div>)
            
     }    

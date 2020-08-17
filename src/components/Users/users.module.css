@@ -1,4 +1,90 @@
+@font-face {
+    font-family: Mulish;   
+    src: url(./../Fonts/Mulish-ExtraLightItalic.ttf);
+    font-family: Mulish-medium;
+    src: url(./../Fonts/Mulish-Medium.ttf);
+    font-family: Raleway;
+    src: url(./../Fonts/Raleway-ThinItalic.ttf)
+}
+
 .userPhoto{
     width: 60px;
     border-radius: 50%;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    width: 100%;
+}
+.userAva{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userInfo{
+    border: 1.5px solid rgb(157, 63, 245);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.userInfoItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.userName{
+    font-family: Mulish-medium;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5px 0 0;
+}
+
+.userLocation{
+    display: flex;
+    flex-direction: row;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 20px 0 20px;
+    padding: 5px 15px;
+    background: rgb(157, 63, 245);
+    border: 1px solid rgb(157, 63, 245);
+    border-radius: 10px;
+    height: 20px;
+    width: 65px;
+    font-size: 12px;
+    color: rgb(196, 196, 196);
+    font-family: Mulish-medium;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    outline: none;
+}
+
+.button:hover{
+    color: black;
+    background: rgb(255, 187, 0);
+    border: 1px solid rgb(255, 187, 0);
+}  
+
+@media screen and (max-width: 500px){
+   .userName{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   } 
+   .userInfo{
+       display: flex;
+       justify-content: center;
+   }
 }
