@@ -29,7 +29,13 @@ const Navbar = () =>{
                 </NavLink>
             </div>
 
-            <div className = {classes.navText}>
+            <div className = {classes.anotherNavText}>
+                <NavLink to = '/users' activeClassName = {classes.active}>
+                    Find Users
+                </NavLink>
+            </div>
+
+            <div className = {classes.anotherNavText}>
                 <NavLink to = '/settings' activeClassName = {classes.active}>
                     Settings
                 </NavLink>
