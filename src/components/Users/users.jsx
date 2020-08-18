@@ -1,46 +1,21 @@
 import React from 'react';
 import classes from './users.module.css';
+import * as axios from 'axios';
+import avatar from './../../assets/images/avatar.svg';
 
 const Users = (props) =>{ 
     if (props.users.length === 0){
-    props.setUsers([
-    {
-        id: 1,
-        photoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTodTGYqOI6A5y8uxf_6FZeUTwHg7BOyUSVEw&usqp=CAU',
-        followed: true,
-        firstName: 'Dmitriy',
-        secondName: ' Aleshin',
-        status: 'I\'m a programmist',
-        country: 'Russia,',
-        city: 'Tver'
-    },
-    {
-        id: 2,
-        photoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTodTGYqOI6A5y8uxf_6FZeUTwHg7BOyUSVEw&usqp=CAU',
-        followed: false,
-        firstName: 'Alexey',
-        secondName: ' Stolyarov',
-        status: 'You are the best',
-        country: 'Russia,',
-        city: 'Moscow'
-    },
-    {
-        id: 3,
-        photoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTodTGYqOI6A5y8uxf_6FZeUTwHg7BOyUSVEw&usqp=CAU',
-        followed: true,
-        firstName: 'Alexandr',
-        secondName: ' Ivanov',
-        status: 'Just a status',
-        country: 'Ukraine,',
-        city: 'Kiev'
-    }])
+        axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
+            props.setUsers(response.data.items);
+        });
+    
 }   
     return(<div>{
             props.users.map(u => <div key = {u.id}>
                 <div className = {classes.user}>
                     <div className = {classes.userAva}>
                         <div>
-                            <img className = {classes.userPhoto} src = {u.photoUrl} alt = ''/>
+                            <img className = {classes.userPhoto} src = {u.photos.small !== null ? u.photos.small : avatar} alt = ''/>
                         </div>
                         <div>
                             {u.followed 
@@ -51,9 +26,9 @@ const Users = (props) =>{
                     <div className = {classes.userInfo}>
                         <div className = {classes.userInfoItem}>
                             <div className = {classes.userName}>
-                                {u.firstName + '' + u.secondName}
+                                {u.name}
                                 <div className = {classes.userLocation}>
-                                    {u.country + '' + u.city}
+                                    {"u.country + '' + u.city"}
                                 </div>
                             </div>
                             <div>
