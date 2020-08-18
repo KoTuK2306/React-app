@@ -34,10 +34,8 @@ const Users = (props) =>{
         country: 'Ukraine,',
         city: 'Kiev'
     }])
-}
-    
+}   
     return(<div>{
-        
             props.users.map(u => <div key = {u.id}>
                 <div className = {classes.user}>
                     <div className = {classes.userAva}>
