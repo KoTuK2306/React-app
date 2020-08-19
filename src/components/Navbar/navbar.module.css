@@ -9,6 +9,12 @@
     grid-area: nav;
     background-color: rgb(157, 63, 245);
     overflow: hidden;
+    transition: all 0.3s ease-in;
+}
+
+
+.open{
+    width: 100px !important;
 }
 
 .navText{
@@ -45,6 +51,8 @@ a:active{
 
 @media screen and (max-width: 768px){
     .nav{
-        max-height: 0;
+        width: 0;
+        height: 100%;
+        position: absolute;
     }
 }
