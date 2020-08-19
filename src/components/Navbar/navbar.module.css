@@ -10,6 +10,7 @@
     background-color: rgb(157, 63, 245);
     overflow: hidden;
     transition: all 0.3s ease-in;
+    min-height: 90vh;
 }
 
 

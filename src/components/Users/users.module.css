@@ -75,7 +75,31 @@
     color: black;
     background: rgb(255, 187, 0);
     border: 1px solid rgb(255, 187, 0);
-}  
+} 
+
+.selectedPage{
+    font-family: Mulish-medium; 
+    font-size: 18px;
+}
+
+.pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: Mulish-medium; 
+    float: left;
+}
+
+.page{
+    margin: 0 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.page:hover{
+    font-size: 18px;
+}
 
 @media screen and (max-width: 500px){
    .userName{
