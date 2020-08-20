@@ -15,7 +15,6 @@ const socialReducer = (state = initialState, action) => {
     }
 }
 
-export const isOpenNavbarAC = (openStatus) =>{
-    return {type: TOGGLE_NAVBAR, openStatus}
-}
+export const isOpenNavbarAC = (openStatus) =>({type: TOGGLE_NAVBAR, openStatus})
+
 export default socialReducer;

@@ -1,5 +1,5 @@
 import {combineReducers, createStore} from 'redux';
-import profileReducer from './profileReducer';
+import profileReducer from './profileReducer.js';
 import messagesReducer from './messagesReducer';
 import usersReducer from './usersReducer';
 import socialReducer from './socialReducer';
