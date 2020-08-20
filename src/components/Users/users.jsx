@@ -21,8 +21,7 @@ const Users = (props) =>{
                                 key={props.id}>{p}</span> 
                 })}
             </div>
-            {
-                props.users.map(u => <div key = {u.id}>
+                {props.users.map(u => <div key = {u.id}>
                     <div className = {classes.user}>
                         <div className = {classes.userAva}>
                             <div>
