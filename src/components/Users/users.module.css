@@ -17,6 +17,7 @@
     flex-direction: row;
     margin-top: 20px;
     width: 100%;
+    
 }
 .userAva{
     display: flex;
@@ -83,13 +84,14 @@
 }
 
 .pages{
+    margin: 10px auto 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 10px;
     cursor: pointer;
-    font-family: Mulish-medium; 
-    float: left;
+    font-family: Mulish-medium;
+    width: 300px;
+    overflow: hidden;
 }
 
 .page{
