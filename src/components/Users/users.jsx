@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './users.module.css';
 import avatarMan from './../../assets/images/avatar.svg';
+/* import { Paginator } from './Pagination/Paginator'; */
 
 const Users = (props) =>{
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -11,11 +12,13 @@ const Users = (props) =>{
 
     return(
         <div>
+            {/* <Paginator pageCount={278} onClick={()=>{}} pageLimit={6}/> */}
             <div className = {classes.pages}>
                 {pages.map(p => {
                     return <span
                                 className={`${classes.page} ${props.currentPage === p && classes.selectedPage}`}
-                                onClick={(e)=>{props.onPageChanged(p)}}>{p}</span> 
+                                onClick={(e)=>{props.onPageChanged(p)}}
+                                key={props.id}>{p}</span> 
                 })}
             </div>
             {

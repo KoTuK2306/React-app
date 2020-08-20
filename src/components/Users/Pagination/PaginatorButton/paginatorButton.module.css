@@ -1,0 +1,12 @@
+.button{
+  padding: 0;
+  width: 25px;
+  height: 30px;
+  text-align: center;
+  background: none;
+  border: 1px solid crimson;
+}
+
+.button__active{
+    background: crimson;
+}

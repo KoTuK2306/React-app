@@ -3,7 +3,6 @@ import classes from './header.module.css';
 import burgerMenu from '../../assets/images/burgerMenu.png'
 
 const Header = (props) =>{
-    console.log(props)
     return(
         <header className = {classes.header}>
             <img 
@@ -16,7 +15,6 @@ const Header = (props) =>{
             src = {burgerMenu}
             alt=''
             onClick={() => props.openNavbar(!props.isOpenNavbar)}/>
-       
         </header>
     );
 }
