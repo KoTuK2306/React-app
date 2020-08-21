@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './users.module.css';
 import avatarMan from './../../assets/images/avatar.svg';
-/* import { Paginator } from './Pagination/Paginator'; */
 
 const Users = (props) =>{
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -12,7 +11,6 @@ const Users = (props) =>{
 
     return(
         <div>
-            {/* <Paginator pageCount={278} onClick={()=>{}} pageLimit={6}/> */}
             <div className = {classes.pages}>
                 {pages.map(p => {
                     return <span
