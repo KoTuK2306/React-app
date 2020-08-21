@@ -38,11 +38,11 @@ const Users = (props) =>{
                                 <div className = {classes.userName}>
                                     {u.name}
                                     <div className = {classes.userLocation}>
-                                        {"u.country + '' + u.city"}
+                                        {'No information available'}
                                     </div>
                                 </div>
                                 <div>
-                                    {'u.status'}
+                                    {u.status === null ? 'Status is empty' : u.status}
                                 </div>
                             </div>
                         </div>
