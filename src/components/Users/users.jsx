@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './users.module.css';
 import avatarMan from './../../assets/images/avatar.svg';
+import { NavLink } from 'react-router-dom';
 
 const Users = (props) =>{
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -13,17 +14,19 @@ const Users = (props) =>{
         <div>
             <div className = {classes.pages}>
                 {pages.map(p => {
-                    return <span
-                                className={`${classes.page} ${props.currentPage === p && classes.selectedPage}`}
-                                onClick={(e)=>{props.onPageChanged(p)}}
-                                key={props.id}>{p}</span> 
+                    return <span className={`${classes.page} ${props.currentPage === p && classes.selectedPage}`}
+                                 onClick={(e)=>{props.onPageChanged(p)}}
+                                 key={props.id}>{p}</span> 
                 })}
             </div>
                 {props.users.map(u => <div key = {u.id}>
                     <div className = {classes.user}>
                         <div className = {classes.userAva}>
                             <div>
-                                <img className = {classes.userPhoto} src = {u.photos.small !== null ? u.photos.small : avatarMan} alt = ''/>
+                                <NavLink to={`/profile/${u.id}`}>
+                                    <img className = {classes.userPhoto}
+                                         src = {u.photos.small !== null ? u.photos.small : avatarMan} alt = ''/>
+                                </NavLink>
                             </div>
                             <div>
                                 {u.followed 

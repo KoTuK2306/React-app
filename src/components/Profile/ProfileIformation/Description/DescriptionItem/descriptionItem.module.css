@@ -1,0 +1,15 @@
+@font-face{
+    font-family: MulishMediumItalic;
+    src: url(./../../../../Fonts/Mulish-MediumItalic.ttf);
+    font-family: RalewayMediumItalic;
+    src: url(../../../../Fonts/Raleway-MediumItalic.ttf);
+}
+.description{
+    font-family: MulishMediumItalic, RalewayMediumItalic;
+    display: flex;
+    flex-direction: column;
+}
+.contacts{
+    display: flex;
+    flex-direction: column;
+}

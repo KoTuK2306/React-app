@@ -5,18 +5,18 @@ import Description from './ProfileIformation/Description/description'
 import MyPostsContainer from './MyPosts/my-postsContainer';
 
 const Profile = (props) =>{
-    return (
+    return(
         <div>
             <ProfileBackground />
             <div className = {classes.profile}>
                 <div className = {classes.aboutProfile}>
-                    <Description />
+                    <Description profile={props.profile}/>
                     <p>My posts</p>
                     <MyPostsContainer /> 
                 </div>
             </div>
         </div>
-    );
+    
+    )
 }
-
 export default Profile;
