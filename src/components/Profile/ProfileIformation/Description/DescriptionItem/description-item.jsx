@@ -8,10 +8,12 @@ const DescriptionItem = (props) =>{
     }
     return(
         <div className={classes.description}>
-            <span>{`Oбо мне: ${props.profile.aboutMe}`}</span>
-            <span>{`Полное имя: ${props.profile.fullName}`}</span>
-            <span>{`${props.lookingForAJob === true ? 'Не ищу работу' : 'Ищу работу'}`}</span>
-            <div>
+            <div className={classes.firstPartfOfDescription}>
+                <span>{`Oбо мне: ${props.profile.aboutMe}`}</span>
+                <span>{`Полное имя: ${props.profile.fullName}`}</span>
+                <span>{`${props.lookingForAJob === true ? 'Не ищу работу' : 'Ищу работу'}`}</span>
+            </div>
+            <div className={classes.secondPartfOfDescription}>
                 Contacts:
                 <div className={classes.contacts}>
                     <span>{`Facebook: ${props.profile.contacts.facebook}`}</span>

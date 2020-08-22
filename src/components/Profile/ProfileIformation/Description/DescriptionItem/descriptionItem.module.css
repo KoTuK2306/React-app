@@ -7,9 +7,29 @@
 .description{
     font-family: MulishMediumItalic, RalewayMediumItalic;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
 }
 .contacts{
     display: flex;
     flex-direction: column;
+}
+
+.firstPartfOfDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secondPartfOfDescription{
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 500px){
+    .description{
+        flex-direction: column; 
+    } 
+    .secondPartfOfDescription{
+        margin-left: 0;
+    }
 }
