@@ -6,18 +6,14 @@ const DescriptionItem = (props) =>{
     if(!props.profile){
         return <Preloader />
     }
-
-   
-
     return(
         <div className={classes.description}>
             <div className={classes.firstPartfOfDescription}>
-                <span>{`About me: ${props.profile.aboutMe}`}</span>
+                <span>{props.profile.aboutMe !== null && `About me: ${props.profile.aboutMe}`}</span>
                 <span>{`Full Name: ${props.profile.fullName}`}</span>
                 <span>{`${props.lookingForAJob === true ? 'Looking for a job' : 'Not looking for a job'}`}</span>
             </div>
             <div className={classes.secondPartfOfDescription}>
-
             {props.isEmptyContacts && 'Contacts does not exist'}
             {!props.isEmptyContacts && 
                 <div className={classes.contacts}>
