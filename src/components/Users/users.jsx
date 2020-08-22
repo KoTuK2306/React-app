@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './users.module.css';
 import avatarMan from './../../assets/images/avatar.svg';
 import { NavLink } from 'react-router-dom';
+import * as axios from 'axios';
 
 const Users = (props) =>{
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -19,7 +20,7 @@ const Users = (props) =>{
                                  key={props.id}>{p}</span> 
                 })}
             </div>
-                {props.users.map(u => <div key = {u.id}>
+                {props.users.map(u => <div key = {props.id}>
                     <div className = {classes.user}>
                         <div className = {classes.userAva}>
                             <div>
@@ -30,8 +31,34 @@ const Users = (props) =>{
                             </div>
                             <div>
                                 {u.followed 
-                                ?<div className = {classes.button} onClick = {()=>{props.unfollow(u.id)}}>Unfollow</div>
-                                :<div className = {classes.button} onClick = {()=>{props.follow(u.id)}}>Follow</div>}   
+                                ?<div className = {classes.button} onClick = {()=>{
+                                    axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`,{
+                                        withCredentials: true,
+                                        headers: {
+                                            'API-KEY': '3e2fdf84-ddd0-4444-8816-5015098e09aa'
+                                        }
+                                    }).then(response => {
+                                        if (response.data.resultCode === 0){
+                                            props.unfollow(u.id)
+                                        }  
+                                    });   
+                                }}>
+                                    Unfollow
+                                </div> 
+                                :<div className = {classes.button} onClick = {()=>{
+                                    axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {},{
+                                        withCredentials: true,
+                                        headers: {
+                                            'API-KEY': '3e2fdf84-ddd0-4444-8816-5015098e09aa'
+                                        }
+                                    }).then(response => {
+                                        if (response.data.resultCode === 0){
+                                            props.follow(u.id)
+                                        }  
+                                    });   
+                                }}>
+                                    Follow
+                                </div>}  
                             </div>
                         </div>
                         <div className = {classes.userInfo}>

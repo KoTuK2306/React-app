@@ -35,7 +35,7 @@ state={
 }
 
 let mapStateToProps = (state) =>({
-    profile: state.profilePage.profile
+    profile: state.profilePage.profile,
 })
 
 let WithURLDataContainerComponent = withRouter(ProfileContainer);
