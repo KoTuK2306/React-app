@@ -10,7 +10,7 @@ const Profile = (props) =>{
             <ProfileBackground />
             <div className = {classes.profile}>
                 <div className = {classes.aboutProfile}>
-                    <Description profile={props.profile}/>
+                    <Description profile={props.profile} isEmptyContacts={props.isEmptyContacts}/>
                     <p>My posts</p>
                     <MyPostsContainer /> 
                 </div>

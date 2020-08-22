@@ -6,16 +6,22 @@ const DescriptionItem = (props) =>{
     if(!props.profile){
         return <Preloader />
     }
+
+   
+
     return(
         <div className={classes.description}>
             <div className={classes.firstPartfOfDescription}>
-                <span>{`Oбо мне: ${props.profile.aboutMe}`}</span>
-                <span>{`Полное имя: ${props.profile.fullName}`}</span>
-                <span>{`${props.lookingForAJob === true ? 'Не ищу работу' : 'Ищу работу'}`}</span>
+                <span>{`About me: ${props.profile.aboutMe}`}</span>
+                <span>{`Full Name: ${props.profile.fullName}`}</span>
+                <span>{`${props.lookingForAJob === true ? 'Looking for a job' : 'Not looking for a job'}`}</span>
             </div>
             <div className={classes.secondPartfOfDescription}>
-            {props.profile.contacts === null ? null : 'Contacts:'}
+
+            {props.isEmptyContacts && 'Contacts does not exist'}
+            {!props.isEmptyContacts && 
                 <div className={classes.contacts}>
+                    <h4>Contacts:</h4>
                     <span>
                         {props.profile.contacts.facebook !== null && `Facebook: ${props.profile.contacts.facebook}`}
                     </span>
@@ -41,6 +47,7 @@ const DescriptionItem = (props) =>{
                         {props.profile.contacts.mainLink !== null && `MainLink: ${props.profile.contacts.mainLink}`}
                     </span>
                 </div>
+            }  
             </div>
         </div>
     );

@@ -16,7 +16,7 @@ const Description = (props) =>{
             <div className={classes.descriptionItem}>    
                 <Ava avatar={props.profile.photos.large}/>
                 <div className={classes.descriptionItemItem}>
-                    <DescriptionItem profile={props.profile}/>
+                    <DescriptionItem isEmptyContacts={props.isEmptyContacts} profile={props.profile}/>
                 </div>
 
             </div>
