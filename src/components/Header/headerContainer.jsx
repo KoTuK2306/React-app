@@ -10,10 +10,9 @@ class HeaderContainer extends React.Component{
             withCredentials: true
         })
         .then(response => {
-            console.log(response)
             if (response.data.resultCode === 0){
-                let {id, email, login} = response.data.data;
-              this.props.setUserData(id, email, login)  
+                let {email, id, login} = response.data.data;
+                this.props.setUserData(email, id, login)
             }
         }); 
     }
@@ -25,7 +24,10 @@ class HeaderContainer extends React.Component{
 let mapStateToProps = (state) => {
     return{
         isOpenNavbar: state.forAllPage.isOpenNavbar,
-        isAuth: state.forAllPage.login
+        isAuth: state.forAllPage.isAuth,
+        login: state.forAllPage.login,
+        id: state.forAllPage.id,
+        email: state.forAllPage.email
     }
 }
 
@@ -34,8 +36,8 @@ let mapDispatchToProps = (dispatch) =>{
         openNavbar: (openStatus) => {
             dispatch(isOpenNavbarAC(openStatus))
         },
-        setUserData: (data) =>{
-            dispatch(setUserData(data))
+        setUserData: (id, email, login) =>{
+            dispatch(setUserData(id, email, login))
         }  
     }
 }

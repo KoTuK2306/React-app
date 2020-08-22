@@ -3,11 +3,10 @@ const SET_USER_DATA = 'SET_USER_DATA';
 
 let initialState ={
     isOpenNavbar: false,
-    userId: null,
+    id: null,
     email: null,
     login: null,
     isAuth: false
-    
 }
 
 const socialReducer = (state = initialState, action) => {
@@ -19,7 +18,10 @@ const socialReducer = (state = initialState, action) => {
         case SET_USER_DATA:
             return{
                 ...state, 
-                ...action.data
+                id: action.id,
+                login: action.login,
+                email: action.email,
+                isAuth: true
             }
         default:
             return state;
@@ -27,6 +29,6 @@ const socialReducer = (state = initialState, action) => {
 }
 
 export const isOpenNavbarAC = (openStatus) =>({type: TOGGLE_NAVBAR, openStatus});
-export const setUserData = (userId, email, login) => ({type: SET_USER_DATA, data: [userId, email, login]})
+export const setUserData = (email, id, login) => ({type: SET_USER_DATA, email, id, login})
 
 export default socialReducer;

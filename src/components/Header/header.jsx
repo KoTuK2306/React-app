@@ -17,8 +17,9 @@ const Header = (props) =>{
             alt=''
             onClick={() => props.openNavbar(!props.isOpenNavbar)}/>
             <div className={classes.authBlock}>
-                {props.isAuth? props.login:
-                <NavLink to={'/login'}><h4>Login</h4></NavLink>}
+             
+                {props.isAuth ? <h4>{props.login}</h4>
+                : <NavLink to={'/login'}><h4>Login</h4></NavLink>}
             </div>
         </header>
     );
