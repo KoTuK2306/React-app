@@ -59,7 +59,7 @@
     justify-content: center;
     align-items: center;
     margin: 20px 20px 0 20px;
-    padding: 5px 15px;
+    padding: 10px 15px;
     background: rgb(157, 63, 245);
     border: 1px solid rgb(157, 63, 245);
     border-radius: 10px;
@@ -78,6 +78,13 @@
     background: rgb(255, 187, 0);
     border: 1px solid rgb(255, 187, 0);
 } 
+
+.button:disabled{
+    background: rgb(206, 206, 206);
+    color: white;
+    border: 1px solid rgb(206, 206, 206);
+    cursor: default;
+}
 
 .selectedPage{
     font-family: Mulish-medium; 
