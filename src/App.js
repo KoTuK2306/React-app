@@ -8,6 +8,7 @@ import News from './../src/components/News/news';
 import Music from './../src/components/Music/music';
 import Settings from './../src/components/Settings/settings';
 import UsersContainer from './components/Users/usersContainer';
+import Login from './components/Login/login'
 import {BrowserRouter, Route, Redirect} from 'react-router-dom';
 
 const App = () => {
@@ -23,7 +24,8 @@ const App = () => {
           <Route path = '/music' render = { () => <Music />}/>
           <Route path = '/users' render = { () => <UsersContainer />}/>
           <Route path = '/settings' render = { () => <Settings />}/>
-          <Redirect to = '/profile'/>
+          <Route path = '/login' render = { () => <Login />}/>
+          {/* <Redirect to = '/profile'/> */}
         </div>
       </div>
       </BrowserRouter>
