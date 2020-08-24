@@ -1,4 +1,4 @@
-import { combineReducers, createStore, applyMiddleware } from "redux";
+import { combineReducers, createStore, applyMiddleware, compose } from "redux";
 import profileReducer from "./profileReducer.js";
 import messagesReducer from "./messagesReducer";
 import usersReducer from "./usersReducer";
@@ -12,6 +12,8 @@ let reducers = combineReducers({
   forAllPage: socialReducer,
 });
 
-let store = createStore(reducers, applyMiddleware(thunkMiddleware));
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+let store = createStore(reducers, composeEnhancers(applyMiddleware(thunkMiddleware)));
 
 export default store;

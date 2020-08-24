@@ -1,4 +1,4 @@
-import { authAPI } from '../components/api/api';
+import { usersAPI } from '../components/api/api';
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
@@ -43,8 +43,10 @@ export const updateNewPostText = (postText) => ({type: UPDATE_NEW_POST_TEXT, new
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 
 export const getUserProfile = (userId) => (dispatch) =>{
-    authAPI.me(userId).then((response) => {
+    usersAPI.getProfile(userId).then((response) => {
+        console.log(response);
         dispatch(setUserProfile(response.data));
+
       });
 }
 export default profileReducer;
