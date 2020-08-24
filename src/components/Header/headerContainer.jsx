@@ -1,17 +1,11 @@
 import React from "react";
 import Header from "./header";
 import { connect } from "react-redux";
-import { isOpenNavbarAC, setUserData } from "../../Redux/socialReducer";
-import { authAPI } from "../api/api";
+import { isOpenNavbarAC, authMe } from "../../Redux/socialReducer";
 
 class HeaderContainer extends React.Component {
   componentDidMount() {
-    authAPI.me().then((response) => {
-      if (response.data.resultCode === 0) {
-        let { email, id, login } = response.data.data;
-        this.props.setUserData(email, id, login);
-      }
-    });
+    this.props.authMe();
   }
   render() {
     return <Header {...this.props} />;
@@ -33,8 +27,8 @@ let mapDispatchToProps = (dispatch) => {
     openNavbar: (openStatus) => {
       dispatch(isOpenNavbarAC(openStatus));
     },
-    setUserData: (id, email, login) => {
-      dispatch(setUserData(id, email, login));
+    authMe: () => {
+      dispatch(authMe());
     },
   };
 };

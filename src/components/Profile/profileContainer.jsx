@@ -13,21 +13,8 @@ class ProfileContainer extends React.Component {
     if (!userId) {
       userId = 11067;
     }
-    
-    this.props.getUserProfile(userId, ()=>{
-        for (const value of Object.values(this.props.profile.contacts)) {
-            if (value !== null) {
-              this.setState({
-                isEmptyContacts: false,
-              });    
-        }
-    }
-          
-    });
-    
-    
-    /* usersAPI.getProfile(userId).then((response) => {
-      this.props.setUserProfile(response.data);
+
+    this.props.getUserProfile(userId, () => {
       for (const value of Object.values(this.props.profile.contacts)) {
         if (value !== null) {
           this.setState({
@@ -35,10 +22,9 @@ class ProfileContainer extends React.Component {
           });
         }
       }
-    }); */
+    });
   }
   render() {
-      
     return (
       <Profile
         {...this.props}
