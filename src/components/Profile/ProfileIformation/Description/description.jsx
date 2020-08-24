@@ -9,7 +9,7 @@ const Description = (props) =>{
     if(!props.profile){
         return <Preloader />
     }
-    
+    console.log(props.profile)
     
     return(
         <div className={classes.description}>
