@@ -13,18 +13,19 @@ const Users = (props) => {
   return (
     <div>
       <div className={classes.pages}>
-        {pages.map((p) => {
+        {pages.map((page) => {
           return (
             <span
               className={`${classes.page} ${
-                props.currentPage === p && classes.selectedPage
+                props.currentPage === page && classes.selectedPage
               }`}
               onClick={(e) => {
-                props.onPageChanged(p);
+                props.onPageChanged(page);
+                props.setCurrentPage(page);
               }}
               key={props.id}
             >
-              {p}
+              {page}
             </span>
           );
         })}
@@ -47,14 +48,20 @@ const Users = (props) => {
                   <button
                     disabled={props.followingProgress.some((id) => id === u.id)}
                     className={classes.button}
-                    onClick={() => {props.unfollow(true, u.id)}}>
+                    onClick={() => {
+                      props.unfollow(u.id);
+                    }}
+                  >
                     Unfollow
                   </button>
                 ) : (
                   <button
                     disabled={props.followingProgress.some((id) => id === u.id)}
                     className={classes.button}
-                    onClick={() => {props.follow(true, u.id)}}>
+                    onClick={() => {
+                      props.follow(u.id);
+                    }}
+                  >
                     Follow
                   </button>
                 )}
