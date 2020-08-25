@@ -1,13 +1,11 @@
 import React from 'react';
 import classes from './profile.module.css';
-import ProfileBackground from './ProfileBackground/profile-background'
 import Description from './ProfileIformation/Description/description'
 import MyPostsContainer from './MyPosts/my-postsContainer';
 
 const Profile = (props) =>{
     return(
         <div>
-            <ProfileBackground />
             <div className = {classes.profile}>
                 <div className = {classes.aboutProfile}>
                     <Description profile={props.profile} isEmptyContacts={props.isEmptyContacts}/>
