@@ -12,9 +12,10 @@ const Users = (props) => {
 
   return (
     <div>
+      
       <div className={classes.pages}>
-        {pages.map((page) => {
-          return (
+        {pages.map((page) => {  
+          return ( 
             <span
               className={`${classes.page} ${
                 props.currentPage === page && classes.selectedPage
@@ -29,7 +30,9 @@ const Users = (props) => {
             </span>
           );
         })}
+        
       </div>
+      
       {props.users.map((u) => (
         <div key={props.id}>
           <div className={classes.user}>

@@ -4,7 +4,9 @@
     font-family: Mulish-medium;
     src: url(./../Fonts/Mulish-Medium.ttf);
     font-family: Raleway;
-    src: url(./../Fonts/Raleway-ThinItalic.ttf)
+    src: url(./../Fonts/Raleway-ThinItalic.ttf);
+    font-family: Mulish-ExtraBold;
+    src: url(../Fonts/Mulish-ExtraBold.ttf)
 }
 
 .userPhoto{
@@ -87,8 +89,10 @@
 }
 
 .selectedPage{
-    font-family: Mulish-medium; 
-    font-size: 18px;
+    font-family: Mulish-ExtraBold;
+    font-size: 22px;
+    color: rgb(255, 187, 0);
+    padding-bottom: 5px;
 }
 
 .pages{
@@ -108,7 +112,10 @@
 }
 
 .page:hover{
-    font-size: 18px;
+    font-size: 22px;
+    color: rgb(255, 187, 0);
+    font-family: Mulish-ExtraBold;
+    padding-bottom: 5px;
 }
 
 @media screen and (max-width: 500px){

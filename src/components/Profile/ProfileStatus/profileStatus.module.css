@@ -1,0 +1,45 @@
+@font-face{
+    font-family: Mulish-MediumItalic;
+    src: url(../../Fonts/Mulish-MediumItalic.ttf)
+}
+.statusDiv{
+    margin-top: 10px;
+}
+
+.status{
+    user-select: none;
+    font-size: 16px;
+}
+
+.statusInput{
+    position: relative;
+    background-color: rgba(255, 248, 220, 0);
+    border: none;
+    width: 200px;
+    height: 22px;
+    font-family: Mulish-MediumItalic;
+    color: rgb(68, 68, 68);
+    font-size: 16px;
+    padding: 0;
+}
+
+.statusInput:focus{
+    outline: none;
+}
+
+.statusInput:focus ~ .inputLine{
+    width: 200px;
+}
+
+.inputLine{
+    position: absolute;
+    height: 1.5px;
+    top: 100%;
+    background-color: rgb(68, 68, 68);
+    width: 0px;
+    transition: all 1s ease-in-out;
+}
+
+.editModeInput{
+    position: relative;
+}

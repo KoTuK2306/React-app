@@ -1,15 +1,24 @@
-.aboutProfile{
-    padding: 20px 0 0 20px;
-    transition: all 0.3s ease-in-out;
+@font-face {
+  font-family: Mulish-MediumItalic;
+  src: url(../Fonts/Mulish-MediumItalic.ttf);
 }
 
-@media screen and (max-width: 768px){
-    .aboutProfile{
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .profile{
-        width: 90%;
-    }
+.profile {
+  font-family: Mulish-MediumItalic;
+}
+
+.aboutProfile {
+  padding: 20px 0 0 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutProfile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile {
+    width: 90%;
+  }
 }
