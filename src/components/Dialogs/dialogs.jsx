@@ -4,6 +4,7 @@ import classes from "./dialogs.module.css";
 import Line from "./Line/line";
 import Dialog from "./Dialog/dialog";
 import Message from "./Message/message";
+import AddMessageFormRedux from "./AddMessageForm/addMessageForm";
 
 const Dialogs = (props) => {
   let state = props.messagesPage;
@@ -17,13 +18,8 @@ const Dialogs = (props) => {
       key={message.id}
     />
   ));
-  let newMessageText = state.newMessageText;
-  const onSendMessageClick = () => {
-    props.sendMessage();
-  };
-  const onNewMessageChange = (e) => {
-    let body = e.target.value;
-    props.updateMessage(body);
+  const addNewMessage = (values) => {
+    props.sendMessage(values.newMessageText);
   };
   return (
     <BrowserRouter>
@@ -32,16 +28,7 @@ const Dialogs = (props) => {
         <Line />
         <div className={classes.messages}>{messages}</div>
       </div>
-      <div className={classes.inputArea}>
-        <textarea
-          value={newMessageText}
-          className={classes.textarea}
-          onChange={onNewMessageChange}
-        />
-        <div onClick={onSendMessageClick} className={classes.button}>
-          Send
-        </div>
-      </div>
+      <AddMessageFormRedux onSubmit={addNewMessage} />
     </BrowserRouter>
   );
 };

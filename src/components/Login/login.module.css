@@ -26,6 +26,7 @@
 .inputItem:focus{
     outline: none;
     border: 1.25px solid rgb(255, 187, 0);
+    box-shadow: 0 0 10px rgba(77, 77, 77, 0.5);
 }
 
 .checkbox{
@@ -75,7 +76,7 @@ input{
     display: block;
     width: 15px;
     height: 15px;
-    border: 1px solid rgb(22, 22, 22);
+    border: 1.2px solid rgb(22, 22, 22);
     border-radius: 3px;
     background-color: rgb(255, 187, 0);
     background-image: url(../../assets/images/check.svg);

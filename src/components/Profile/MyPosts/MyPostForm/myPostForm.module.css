@@ -1,0 +1,66 @@
+@font-face {
+  font-family: Mulish;
+  src: url(../../../Fonts/Mulish-ExtraLightItalic.ttf);
+  font-family: Mulish-medium;
+  src: url(../../../Fonts/Mulish-Medium.ttf);
+  font-family: Raleway;
+  src: url(./../../../Fonts/Raleway-ThinItalic.ttf);
+}
+.myPosts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 95%;
+  padding: 0 20px;
+}
+
+.input {
+  width: 100%;
+  display: inline-block;
+  min-height: 30px;
+  padding-left: 10px;
+  border: 1.25px solid rgb(157, 63, 245);
+  border-radius: 10px;
+  font-family: Mulish, Raleway;
+  color: rgb(70, 70, 70);
+  transition: all 0.3s ease-in;
+  resize: none;
+  overflow: hidden;
+}
+
+.input:focus {
+  border: 1.25px solid rgb(255, 187, 0);
+  border-radius: 10px;
+  outline: none;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px 0 0;
+  padding: 5px 15px;
+  background: rgb(157, 63, 245);
+  border: 1px solid rgb(157, 63, 245);
+  border-radius: 10px;
+  height: 25px;
+  width: 90px;
+  font-size: 12px;
+  color: rgb(196, 196, 196);
+  font-family: Mulish-medium;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  color: black;
+  background: rgb(255, 187, 0);
+  border: 1px solid rgb(255, 187, 0);
+}
+
+@media screen and (max-width: 768px) {
+  .myPosts {
+    width: 100%;
+  }
+}
