@@ -1,4 +1,5 @@
 import { combineReducers, createStore, applyMiddleware, compose } from "redux";
+import { reducer as formReducer } from 'redux-form'
 import profileReducer from "./profileReducer.js";
 import messagesReducer from "./messagesReducer";
 import usersReducer from "./usersReducer";
@@ -10,6 +11,7 @@ let reducers = combineReducers({
   profilePage: profileReducer,
   usersPage: usersReducer,
   forAllPage: socialReducer,
+  form: formReducer
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
