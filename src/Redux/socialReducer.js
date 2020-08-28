@@ -20,7 +20,7 @@ const socialReducer = (state = initialState, action) => {
         id: action.id,
         login: action.login,
         email: action.email,
-        isAuth: true,
+        isAuth: action.isAuth,
       };
     default:
       return state;
