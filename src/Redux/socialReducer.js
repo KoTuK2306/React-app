@@ -20,7 +20,7 @@ const socialReducer = (state = initialState, action) => {
         id: action.id,
         login: action.login,
         email: action.email,
-        isAuth: true,
+        isAuth: action.isAuth,
       };
     default:
       return state;
@@ -28,13 +28,29 @@ const socialReducer = (state = initialState, action) => {
 };
 
 export const isOpenNavbarAC = (openStatus) => ({type: TOGGLE_NAVBAR, openStatus});
-export const setUserData = (email, id, login) => ({type: SET_USER_DATA, email, id, login});
+export const setUserData = (email, id, login, isAuth) => ({type: SET_USER_DATA, email, id, login, isAuth});
 
 export const authMe = () => (dispatch) => {
   authAPI.me().then((response) => {
     if (response.data.resultCode === 0) {
       let { email, id, login } = response.data.data;
-      dispatch(setUserData(email, id, login));
+      dispatch(setUserData(email, id, login, true));
+    }
+  });
+};
+
+export const login = (email, password, rememberMe) => (dispatch) => {
+  authAPI.login(email, password, rememberMe).then((response) => {
+    if (response.data.resultCode === 0) {
+      dispatch(authMe())
+    }
+  });
+};
+
+export const logout = () => (dispatch) => {
+  authAPI.logout().then((response) => {
+    if (response.data.resultCode === 0) {
+      dispatch(setUserData(null, null, null, false));
     }
   });
 };

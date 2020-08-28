@@ -2,6 +2,7 @@
   font-family: Mulish-MediumItalic;
   src: url(../Fonts/Mulish-MediumItalic.ttf);
 }
+
 form {
     font-family: Mulish-MediumItalic;
 }
@@ -16,8 +17,6 @@ form {
 .input {
   margin-top: 10px;
 }
-
-
 
 .checkbox {
   display: flex;
@@ -89,6 +88,7 @@ input {
   color: rgb(68, 68, 68);
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  outline: none;
 }
 
 .button:hover {
