@@ -1,0 +1,65 @@
+/* Textarea styles */
+
+.textarea {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.textareaItem {
+  width: 95%;
+  display: inline-block;
+  min-height: 30px;
+  padding-left: 10px;
+  border: 1.25px solid rgb(157, 63, 245);
+  border-radius: 10px;
+  font-family: Mulish, Raleway;
+  color: rgb(70, 70, 70);
+  transition: all 0.3s ease-in;
+  resize: none;
+  overflow: hidden;
+}
+
+.textareaItem:focus {
+  border: 1.25px solid rgb(255, 187, 0);
+  border-radius: 10px;
+  outline: none;
+}
+
+.textareaItem.error {
+  border: 1.25px solid red;
+}
+.error,
+.errorMessage {
+  color: red;
+}
+
+.errorMessage {
+  margin-top: 10px;
+}
+
+/* Input styles */
+
+.inputItem {
+  background: none;
+  border: 1.25px solid rgb(157, 63, 245);
+  border-radius: 10px;
+  height: 25px;
+  width: 280px;
+  transition: all 0.5s ease-in-out;
+}
+
+.inputItem:focus {
+  outline: none;
+  border: 1.25px solid rgb(255, 187, 0);
+  box-shadow: 0 0 10px rgba(77, 77, 77, 0.5);
+}
+
+
+.inputItem.error {
+  border: 1.25px solid red;
+}
+
+.errorMessage {
+  margin-left: 10px;
+}

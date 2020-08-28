@@ -1,108 +1,98 @@
-@font-face{
-    font-family: Mulish-MediumItalic;
-    src: url(../Fonts/Mulish-MediumItalic.ttf)
+@font-face {
+  font-family: Mulish-MediumItalic;
+  src: url(../Fonts/Mulish-MediumItalic.ttf);
 }
-
-.loginForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.input{
-    margin-top: 10px;
-}
-
-.inputItem{
-    background: none;
-    border: 1.25px solid rgb(157, 63, 245);
-    border-radius: 10px;
-    height: 25px;
-    width: 280px;
-    transition: all 0.5s ease-in-out;
-}
-
-.inputItem:focus{
-    outline: none;
-    border: 1.25px solid rgb(255, 187, 0);
-    box-shadow: 0 0 10px rgba(77, 77, 77, 0.5);
-}
-
-.checkbox{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
-    margin: 20px 0;
-}
-
-.checkboxItem{
-    appearance: none;
-    position: absolute;
-}
-
-.checkboxItem:checked + .checkboxText::after{
-    opacity: 1;
-}
-
-.checkboxText{
-    margin-left: 25px;
-    margin-top: -2.3px;
-    padding: 0;
+form {
     font-family: Mulish-MediumItalic;
 }
 
-.checkboxText::before{
-    content: '';
-    display: block;
-    width: 15px;
-    height: 15px;
-    border: 1px solid rgb(157, 63, 245);
-    border-radius: 3px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    cursor: pointer;
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-input{
-    padding-left: 10px;
+.input {
+  margin-top: 10px;
 }
 
-.checkboxText::after{
-    content: '';
-    display: block;
-    width: 15px;
-    height: 15px;
-    border: 1.2px solid rgb(22, 22, 22);
-    border-radius: 3px;
-    background-color: rgb(255, 187, 0);
-    background-image: url(../../assets/images/check.svg);
-    background-size: 15px 15px;
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    left: 0;
-    cursor: pointer;
-    z-index: 2;
-    transition: all 0.5s ease-in-out;   
+
+
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  margin: 20px 0;
 }
 
-.button{
-    border: 1.25px solid rgb(157, 63, 245);
-    background-color: rgb(157, 63, 245);
-    border-radius: 10px;
-    height: 24px;
-    width: 66px;
-    color: rgb(68, 68, 68);
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
+.checkboxItem {
+  appearance: none;
+  position: absolute;
 }
 
-.button:hover{
-    border: 1.25px solid rgb(255, 187, 0);
-    background-color: rgb(255, 187, 0);
-    color: rgb(22, 22, 22);
+.checkboxItem:checked + .checkboxText::after {
+  opacity: 1;
+}
+
+.checkboxText {
+  margin-left: 25px;
+  margin-top: -2.3px;
+  padding: 0;
+  font-family: Mulish-MediumItalic;
+}
+
+.checkboxText::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgb(157, 63, 245);
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+input {
+  padding-left: 10px;
+}
+
+.checkboxText::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 1.2px solid rgb(22, 22, 22);
+  border-radius: 3px;
+  background-color: rgb(255, 187, 0);
+  background-image: url(../../assets/images/check.svg);
+  background-size: 15px 15px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  left: 0;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+
+.button {
+  border: 1.25px solid rgb(157, 63, 245);
+  background-color: rgb(157, 63, 245);
+  border-radius: 10px;
+  height: 24px;
+  width: 66px;
+  color: rgb(68, 68, 68);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.button:hover {
+  border: 1.25px solid rgb(255, 187, 0);
+  background-color: rgb(255, 187, 0);
+  color: rgb(22, 22, 22);
 }
