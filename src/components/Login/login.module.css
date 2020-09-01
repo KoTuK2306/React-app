@@ -96,3 +96,8 @@ input {
   background-color: rgb(255, 187, 0);
   color: rgb(22, 22, 22);
 }
+
+.formSummaryError{
+  color: crimson;
+  margin: 0 10px 15px 0
+}

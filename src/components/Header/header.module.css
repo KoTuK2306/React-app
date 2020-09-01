@@ -28,6 +28,20 @@
   cursor: pointer;
 }
 
+.login{
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-in;
+}
+
+.active{
+  color: rgb(255, 208, 0);
+}
+
+.login:hover {
+  color: rgb(255, 208, 0);
+}
+
 .user {
   margin-top: 1px;
   border-right: 1px solid white;

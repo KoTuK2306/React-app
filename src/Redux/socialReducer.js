@@ -1,4 +1,5 @@
 import { authAPI } from "../components/api/api";
+import { stopSubmit } from "redux-form";
 const TOGGLE_NAVBAR = "TOGGLE_NAVBAR";
 const SET_USER_DATA = "SET_USER_DATA";
 
@@ -39,10 +40,15 @@ export const authMe = () => (dispatch) => {
   });
 };
 
-export const login = (email, password, rememberMe) => (dispatch) => {
-  authAPI.login(email, password, rememberMe).then((response) => {
+export const login = (login, password, rememberMe) => (dispatch) => {
+   
+   authAPI.login(login, password, rememberMe).then((response) => {
     if (response.data.resultCode === 0) {
       dispatch(authMe())
+    }
+    else{
+      let message = response.data.messages.length > 0 ? response.data.messages[0] : 'Some error';
+      dispatch(stopSubmit("login", {_error: message}));
     }
   });
 };
