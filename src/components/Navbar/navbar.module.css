@@ -1,59 +1,65 @@
 @font-face {
-    font-family: Mulish-medium;
-    src: url(../Fonts/Mulish-Medium.ttf);
+  font-family: Mulish-medium;
+  src: url(../Fonts/Mulish-Medium.ttf);
 }
 
-.nav{
-    display: flex;
-    flex-direction: column;
-    grid-area: nav;
-    background-color: rgb(157, 63, 245);
-    overflow: hidden;
-    transition: all 0.3s ease-in;
-    min-height: 90vh;
+.nav {
+  display: flex;
+  flex-direction: column;
+  grid-area: nav;
+  background-color: rgb(157, 63, 245);
+  overflow: hidden;
+  transition: all 0.3s ease-in;
+  min-height: 90vh;
 }
 
-
-.open{
-    width: 100px !important;
+.open {
+  width: 100px !important;
 }
 
-.navText{
-    font-size: 15px;
-    margin: 10px 10px 0 10px;
-    cursor: pointer; 
-    font-family: Mulish-medium;  
+.navItem {
+  margin: 10px 10px 0 10px;
 }
 
-.navText a.active{
-    color: white;
+.anotherNavItem {
+  margin: 20px 10px 0 10px;
 }
 
-.anotherNavText{
-    font-size: 15px;
-    margin: 20px 10px 0 10px;
-    cursor: pointer; 
-    font-family: Mulish-medium;
+.navText {
+  font-size: 15px;
+  cursor: pointer;
+  font-family: Mulish-medium;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
 }
 
-a{
-    text-decoration: none;
-    color: rgb(68, 68, 68);
-    transition: all 0.5s ease-in;
+.anotherNavText:hover,
+.navText:hover {
+  color: rgb(255, 208, 0);
 }
 
-a:hover{
-    color: white;
+.anotherNavText.active {
+  color: rgb(255, 208, 0);
 }
 
-a:active{
-    color: white;
+.active {
+  color: rgb(255, 208, 0);
 }
 
-@media screen and (max-width: 768px){
-    .nav{
-        width: 0;
-        height: 100%;
-        position: absolute;
-    }
+.anotherNavText {
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+  font-family: Mulish-medium;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    width: 0;
+    height: 100%;
+    position: absolute;
+  }
 }

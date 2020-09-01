@@ -6,9 +6,14 @@
 .dialog{
     margin: 15px 0 15px 0;
     transition: all 0.5s ease-in;
+}
+
+.dialogItem{
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    transition: all 0.3s ease-in;
     font-family: Mulish-medium;
     font-size: 15px;
-    color: rgb(68, 68, 68);
 }
 
 .dialogItem:hover{
