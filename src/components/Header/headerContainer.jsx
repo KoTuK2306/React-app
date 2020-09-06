@@ -1,12 +1,9 @@
 import React from "react";
 import Header from "./header";
 import { connect } from "react-redux";
-import { isOpenNavbarAC, authMe, logout } from "../../Redux/socialReducer";
+import { isOpenNavbarAC, logout } from "../../Redux/socialReducer";
 
 class HeaderContainer extends React.Component {
-  componentDidMount() {
-    this.props.authMe();
-  }
   render() {
     return <Header {...this.props} />;
   }
@@ -24,9 +21,6 @@ let mapDispatchToProps = (dispatch) => {
   return {
     openNavbar: (openStatus) => {
       dispatch(isOpenNavbarAC(openStatus));
-    },
-    authMe: () => {
-      dispatch(authMe());
     },
     logout: () =>{
       dispatch(logout())

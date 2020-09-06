@@ -5,12 +5,14 @@ import messagesReducer from "./messagesReducer";
 import usersReducer from "./usersReducer";
 import socialReducer from "./socialReducer";
 import thunkMiddleware from "redux-thunk";
+import appReducer from "./appReducer.js";
 
 let reducers = combineReducers({
   messagesPage: messagesReducer,
   profilePage: profileReducer,
   usersPage: usersReducer,
   forAllPage: socialReducer,
+  app: appReducer,
   form: formReducer
 });
 
