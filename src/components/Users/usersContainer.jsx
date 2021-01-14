@@ -5,19 +5,27 @@ import { connect } from "react-redux";
 import {
   follow,
   unfollow,
-  getUsers,
+  receiveUsers,
   setCurrentPage,
   toggleIsFollowingProgress,
 } from "../../Redux/usersReducer";
 import { compose } from "redux";
+import {
+  getPageSize,
+  getTotalUsersCount,
+  getUsersSuperSelector,
+  getCurrentPage,
+  getIsFetching,
+  getFollowingProgress } from "../../Redux/usersSelectors";
 
 class UsersContainer extends React.Component {
   componentDidMount() {
-    this.props.getUsers(this.props.currentPage, this.props.pageSize);
+    this.props.receiveUsers(this.props.currentPage, this.props.pageSize);
   }
   onPageChanged = (pageNumber) => {
-    this.props.getUsers(pageNumber, this.props.pageSize);
+    this.props.receiveUsers(pageNumber, this.props.pageSize);
   };
+  debugger;
   render() {
     return (
       <>
@@ -40,12 +48,12 @@ class UsersContainer extends React.Component {
 
 let mapStateToProps = (state) => {
   return {
-    users: state.usersPage.users,
-    pageSize: state.usersPage.pageSize,
-    totalUsersCount: state.usersPage.totalUsersCount,
-    currentPage: state.usersPage.currentPage,
-    isFetching: state.usersPage.isFetching,
-    followingProgress: state.usersPage.followingProgress,
+    users: getUsersSuperSelector(state),
+    pageSize: getPageSize(state),
+    totalUsersCount: getTotalUsersCount(state),
+    currentPage: getCurrentPage(state),
+    isFetching: getIsFetching(state),
+    followingProgress: getFollowingProgress(state)
   };
 };
 
@@ -55,6 +63,6 @@ export default compose(
     unfollow,
     toggleIsFollowingProgress,
     setCurrentPage,
-    getUsers,
+    receiveUsers,
   })
 )(UsersContainer);
